@@ -1,29 +1,34 @@
-import java.util.Scanner;
+package hellofx;
 
-class Main{
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
-    static boolean check(Account account){
-        //accepts type Account
-        //checks if Account name and password combo exists(basically if Account in parameter is already a valid object in addAccounts list)
-        //returns true or false
-        return true;
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
+        Scene scene = new Scene(root);
+     
+        primaryStage.setTitle("Car Shop");
+        primaryStage.setHeight(500);
+        primaryStage.setWidth(700);
+        primaryStage.setScene(scene);
+        primaryStage.show(); //stage pops up 
     }
-    
-    static void addAccount(Account account){
-        //accepts type Account
-        //makes a list of valid accounts of type "Account" (probably arraylist)
-        //
-    }
 
-    public static void main(String[] args){
-        String userName, userPassword;
-        Scanner scanner = new Scanner(System.in);
-        
-        // account enteredAccountInfo;
-        // userName = scanner.next(); //can be used later to allow for new Account
-        // userPassword = scanner.next();
-        
-        //enteredAccountInfo = new Account(userName, userPassword);
-        //write a line that takes in the user input to continually reinitialize an Account to continue using addAccount method
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
