@@ -1,0 +1,32 @@
+1;img1.jpg;John Doe;Red;Good;25000;Clean;Sunroof;90210;A reliable sedan with low mileage.
+1;image1.jpg;John Doe;Red;Good;25000;Clean;Sunroof, Leather Seats;90210;2015 Toyota Camry, well-maintained with regular service records.
+2;image2.jpg;Jane Smith;Blue;Excellent;15000;Clean;Navigation System;10001;2018 Honda Accord with low mileage and all service records available.
+3;image3.jpg;Emily Johnson;Green;Fair;60000;Salvage;Backup Camera;30301;2012 Ford Focus, minor dents but runs well.
+4;image4.jpg;Michael Brown;Black;Good;40000;Clean;Bluetooth, Alloy Wheels;60601;2016 Nissan Altima, reliable and spacious.
+5;image5.jpg;Jessica Davis;White;Excellent;12000;Clean;Heated Seats, Remote Start;33101;2020 Hyundai Elantra, virtually new condition.
+6;image6.jpg;James Wilson;Yellow;Fair;80000;Clear;Tow Package;75201;2010 Chevrolet Silverado, workhorse truck with wear.
+7;image7.jpg;Sarah Martinez;Gray;Good;35000;Clean;Leather Seats, Premium Sound;2139;2017 Subaru Outback, all-wheel drive, great for winter.
+8;image8.jpg;David Garcia;Red;Excellent;10000;Clean;Alloy Wheels;94103;2019 Mazda 3, sporty and fuel-efficient.
+9;image9.jpg;Laura Rodriguez;Orange;Fair;70000;Salvage;Third Row Seating;33139;2011 Kia Sorento, family-friendly SUV with some repairs.
+10;image10.jpg;Robert Lee;Silver;Good;30000;Clean;Sunroof;98101;2014 Ford Fusion, sleek design and great mileage.
+11;image11.jpg;Linda White;Brown;Excellent;9000;Clean;Apple CarPlay;10010;2021 Volkswagen Jetta, still under warranty.
+12;image12.jpg;Charles Harris;Blue;Fair;50000;Clear;Navigation;60606;2013 BMW 3 Series, luxury car with minor wear.
+13;image13.jpg;Maria Clark;Purple;Good;45000;Clean;Backup Camera;70112;2015 Jeep Cherokee, versatile and rugged.
+14;image14.jpg;William Lewis;Black;Excellent;11000;Clean;Leather Seats, Heated Steering Wheel;48226;2020 Ford Escape, great for city driving.
+15;image15.jpg;Susan Hall;Pink;Fair;75000;Salvage;Power Windows;30303;2009 Nissan Versa, budget-friendly with some history.
+1;img1.jpg;John Doe;Red;Good;25000;Clean;Sunroof;90210;A reliable sedan with low mileage.
+1;image1.jpg;John Doe;Red;Good;25000;Clean;Sunroof, Leather Seats;90210;2015 Toyota Camry, well-maintained with regular service records.
+2;image2.jpg;Jane Smith;Blue;Excellent;15000;Clean;Navigation System;10001;2018 Honda Accord with low mileage and all service records available.
+3;image3.jpg;Emily Johnson;Green;Fair;60000;Salvage;Backup Camera;30301;2012 Ford Focus, minor dents but runs well.
+4;image4.jpg;Michael Brown;Black;Good;40000;Clean;Bluetooth, Alloy Wheels;60601;2016 Nissan Altima, reliable and spacious.
+5;image5.jpg;Jessica Davis;White;Excellent;12000;Clean;Heated Seats, Remote Start;33101;2020 Hyundai Elantra, virtually new condition.
+6;image6.jpg;James Wilson;Yellow;Fair;80000;Clear;Tow Package;75201;2010 Chevrolet Silverado, workhorse truck with wear.
+7;image7.jpg;Sarah Martinez;Gray;Good;35000;Clean;Leather Seats, Premium Sound;2139;2017 Subaru Outback, all-wheel drive, great for winter.
+8;image8.jpg;David Garcia;Red;Excellent;10000;Clean;Alloy Wheels;94103;2019 Mazda 3, sporty and fuel-efficient.
+9;image9.jpg;Laura Rodriguez;Orange;Fair;70000;Salvage;Third Row Seating;33139;2011 Kia Sorento, family-friendly SUV with some repairs.
+10;image10.jpg;Robert Lee;Silver;Good;30000;Clean;Sunroof;98101;2014 Ford Fusion, sleek design and great mileage.
+11;image11.jpg;Linda White;Brown;Excellent;9000;Clean;Apple CarPlay;10010;2021 Volkswagen Jetta, still under warranty.
+12;image12.jpg;Charles Harris;Blue;Fair;50000;Clear;Navigation;60606;2013 BMW 3 Series, luxury car with minor wear.
+13;image13.jpg;Maria Clark;Purple;Good;45000;Clean;Backup Camera;70112;2015 Jeep Cherokee, versatile and rugged.
+14;image14.jpg;William Lewis;Black;Excellent;11000;Clean;Leather Seats, Heated Steering Wheel;48226;2020 Ford Escape, great for city driving.
+15;image15.jpg;Susan Hall;Pink;Fair;75000;Salvage;Power Windows;30303;2009 Nissan Versa, budget-friendly with some history.

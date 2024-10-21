@@ -1,0 +1,26 @@
+import java.io.File; // Import the File class
+import java.io.FileNotFoundException; // Import this class to handle errors
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner; // Import the Scanner class to read text files
+
+public class ReadFile {
+    public static void main(String[] args) { // This function can only read listings, but should serve as a template
+        List<Listing> listings = new ArrayList<>();
+        try {
+            File myObj = new File("C:\\Users\\Max\\Desktop\\Fall 24\\COMP 380\\data\\listing.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+                String[] parts = data.split(";");
+                listings.add(new Listing(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7],
+                        parts[8], parts[9]));
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
