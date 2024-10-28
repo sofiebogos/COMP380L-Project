@@ -67,7 +67,6 @@ public class controller {
         String cardNumber = createCardnum.getText();
         String CVC = createCVC.getText(); 
         String expDate = createExp.getText();
-        System.out.println("Create Account info:"+email2+ password2+ DOBmonth + DOBday +DOByear + address + city + state + ZIP + cardNumber + CVC + expDate);
         stage.setScene(scene);
         stage.show();
     }
