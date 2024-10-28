@@ -7,12 +7,15 @@ public class Listing { // While some variables are ints, ONLY pass strings
     private int mileage;
     private String titleStatus;
     private String bonusFeatures;
-    private int zip;
+    private String zip;
     private String desc;
-    private int arraySize = 10; // This is open to expansion if need be
+    private int price;
+    private String vehicle;
+    private int arraySize = 12; // This is open to expansion if need be
 
     public Listing(String id, String pictures, String owner, String color, String condition,
-            String mileage, String titleStatus, String bonusFeatures, String zip, String desc) {
+            String mileage, String titleStatus, String bonusFeatures, String zip, String desc, String price,
+            String vehicle) {
         this.ID = Integer.parseInt(id);
         this.pictures = pictures;
         this.owner = owner;
@@ -21,8 +24,10 @@ public class Listing { // While some variables are ints, ONLY pass strings
         this.mileage = Integer.parseInt(mileage);
         this.titleStatus = titleStatus;
         this.bonusFeatures = bonusFeatures;
-        this.zip = Integer.parseInt(zip);
+        this.zip = zip;
         this.desc = desc;
+        this.price = Integer.parseInt(price);
+        this.vehicle = vehicle;
         this.Export(this.getVars()); // NOT FINAL, just for testing
     }
 
@@ -46,8 +51,10 @@ public class Listing { // While some variables are ints, ONLY pass strings
         vars[5] = Integer.toString(this.mileage);
         vars[6] = this.titleStatus;
         vars[7] = this.bonusFeatures;
-        vars[8] = Integer.toString(this.zip);
+        vars[8] = this.zip;
         vars[9] = this.desc;
+        vars[10] = Integer.toString(this.price);
+        vars[11] = this.vehicle;
         return vars; // Return the array
     }
 
@@ -66,7 +73,7 @@ public class Listing { // While some variables are ints, ONLY pass strings
                 superString = superString + ";" + listingData[i];
             }
         }
-        WriteFile.writeToFile("listing.txt", superString);
+        WriteFile.appendToFile("listing.txt", superString);
     }
 
 }
