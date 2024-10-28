@@ -49,7 +49,7 @@ public class controller {
     private TextField createExp;
 
     public void switchToLogin(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
+        root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
@@ -93,7 +93,7 @@ public class controller {
 
         System.out.println("You have successfully logged in!"); 
         System.out.println("Email: " + email);
-        System.out.println("Password: " + password + email);
+        System.out.println("Password: " + password);
     }
 
     
