@@ -27,12 +27,15 @@ public class WriteFile {
     // This just appends a new line to whatever is in the file
     // TO DO: Add a check so it doesn't add the same lines over and over again!
     // --------------------------------------------------------------------------------------------------------
-    public static void writeToFile(String filename, String content) {
+    public static void appendToFile(String filename, String content) {
         Path path = Paths.get(filename);
+
         try {
-            content = content + "\n";
-            Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-            System.out.println("Successfully wrote to the file.");
+            if (ReadFile.Compare(content) != true) {
+                content = content + "\n";
+                Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                System.out.println("Successfully wrote to the file.");
+            }
         } catch (IOException e) {
             System.err.println("An error occurred while writing to the file: " + e.getMessage());
         }
