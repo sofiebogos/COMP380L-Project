@@ -48,7 +48,7 @@ public class controller {
         String password = passwordtext.getText();
 
         System.out.println("You have successfully logged in!"); 
-        System.out.println("Username: " + email);
+        System.out.println("Email: " + email);
         System.out.println("Password: " + password);
     }
 
