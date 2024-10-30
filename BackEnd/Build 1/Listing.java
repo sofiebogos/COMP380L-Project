@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+import java.awt.Image;
+
 public class Listing { // While some variables are ints, ONLY pass strings
     private int ID;
+    // private ArrayList<Image> pictures;
     private String pictures;
     private String owner;
     private String color;
@@ -32,8 +36,8 @@ public class Listing { // While some variables are ints, ONLY pass strings
     }
 
     public void setID(String id2) {
-        id2 = Integer.parseInt(id2);
-        this.ID = id2;
+        // id2 = Integer.parseInt(id2);
+        // this.ID = id2;
     }
 
     public int getArrayLength() {
