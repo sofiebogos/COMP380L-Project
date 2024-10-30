@@ -25,13 +25,13 @@ public class WriteFile {
 
     // --------------------------------------------------------------------------------------------------------
     // This just appends a new line to whatever is in the file
-    // TO DO: Add a check so it doesn't add the same lines over and over again!
+    // It uses compare to not add duplicates
     // --------------------------------------------------------------------------------------------------------
     public static void appendToFile(String filename, String content) {
         Path path = Paths.get(filename);
 
         try {
-            if (ReadFile.Compare(content) != true) {
+            if (ReadFile.Compare(content, "listing.txt") != true) {
                 content = content + "\n";
                 Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 System.out.println("Successfully wrote to the file.");
