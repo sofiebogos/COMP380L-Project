@@ -17,13 +17,17 @@
       </ImageView>
       <Button fx:id="previousCar" layoutX="43.0" layoutY="169.0" mnemonicParsing="false" onAction="#previousImage" text="&lt;" />
       <Button fx:id="nextCar" layoutX="417.0" layoutY="169.0" mnemonicParsing="false" onAction="#nextImage" text="&gt;" />
-      <Label layoutX="78.0" layoutY="351.0" text="Year: 2006" />
-      <Label layoutX="70.0" layoutY="381.0" text="Make: Disney" />
-      <Label layoutX="60.0" layoutY="420.0" text="Model: McQueen??" />
+      <Label layoutX="64.0" layoutY="350.0" text="Year: 2006" />
+      <Label layoutX="64.0" layoutY="379.0" text="Make: Disney" />
+      <Label layoutX="64.0" layoutY="408.0" text="Model: McQueen??" />
       <Label layoutX="78.0" layoutY="67.0" text="The One and Only Lightning McQueen For Sale">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
+      <Label layoutX="64.0" layoutY="319.0" text="Seller: The Mafia?" />
+      <Label layoutX="64.0" layoutY="438.0" text="Condition: Used" />
+      <Label layoutX="64.0" layoutY="466.0" text="Title Status: Clean" />
+      <Label layoutX="64.0" layoutY="495.0" text="Description: " />
    </children>
 </AnchorPane>
