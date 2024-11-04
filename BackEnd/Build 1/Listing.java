@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.awt.Image;
+import javafx.scene.image.*;
 
 public class Listing { // While some variables are ints, ONLY pass strings
     private int ID;
