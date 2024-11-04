@@ -8,7 +8,7 @@ public class Login {
         String correctEmail = "jams03@gmail.com";
         String correctPassword = "Mcqueen101";
         String filename = "UserSignup.txt";
-       /* String FirstName = "Jams";
+        String FirstName = "Jams";
         String LastName = "Jameson";
         String Email = "jams03@gmail.com";
         String Password = "Mcqueen101";
@@ -23,8 +23,13 @@ public class Login {
         int CVC = 123;
         String ExpDate = "10/29";
 
-        String content = content + '\n', "+FirstName+", "+LastName+", "+Email+", "+Password+", "+DOBMonth+", "+DOBDay+", "+DOBYear+", "+Address+", "+City+", "+State+", "+ZipCode+", "+CardNum+", "+CVC+", "+ExpDate+";
-         */
+        String content = "";
+
+        //Content to declared variables
+        content = content + '\n' + FirstName + ", " + LastName + ", " + Email + ", " + Password + ", " +
+                DOBMonth + ", " + DOBDay + ", " + DOBYear + ", " + Address + ", " + City + ", " + State +
+                ", " + ZipCode + ", " + CardNum + ", " + CVC + ", " + ExpDate;
+
         Scanner input = new Scanner(System.in);
 
         //User Input for email associated with their account
