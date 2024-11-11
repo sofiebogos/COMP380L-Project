@@ -95,7 +95,7 @@ public class Main extends Application {
 		myStage.getIcons().add(icon);
 		myStage.setTitle("Jams Car Sales");
 
-		Parent root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("listing.fxml"));
 
 		Scene scene = new Scene(root, Color.GRAY);
 		myStage.setScene(scene);

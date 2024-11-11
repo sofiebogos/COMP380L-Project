@@ -4,7 +4,7 @@ import javafx.scene.image.*;
 
 public class Listing { // While some variables are ints, ONLY pass strings
     private int ID;
-    // private ArrayList<Image> pictures;
+    //private ArrayList<Image> pictures;
     private String pictures;
     private String owner;
     private String color;
