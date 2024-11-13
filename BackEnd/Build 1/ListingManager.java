@@ -13,7 +13,7 @@ public class ListingManager {
     }
 
     //Getter for a listing in the ArrayList.
-    //Finds the specific list by using listing ID as a parameter
+    //Finds the specific listing by using the listing ID as a parameter
     public ListingTest getListing(int id){
         listingIterator = listings.listIterator();
         while (listingIterator.hasNext()){
