@@ -7,7 +7,7 @@ public class ListingManager {
     public static ArrayList<ListingTest> listings = new ArrayList<>();
     public static ListIterator<ListingTest> listingIterator;
 
-    public void addListing(ListingTest tempList){ //adds new listing to end of the arraylist
+    public static void addListing(ListingTest tempList){ //adds new listing to end of the arraylist
         listings.add(tempList);
         listingIterator = listings.listIterator();
     }
@@ -18,7 +18,7 @@ public class ListingManager {
         listingIterator = listings.listIterator();
         while (listingIterator.hasNext()){
             ListingTest tempList = listingIterator.next();
-            if (tempList.ID == id){
+            if (tempList.getID() == id){
                 return tempList;
             }
         }
