@@ -33,23 +33,21 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="340.0" layoutY="652.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="35.0" prefWidth="119.0" text="Enter">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
+            <TextField fx:id="createEmail" layoutX="240.0" layoutY="276.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="320.0" />
             <TextField fx:id="createPassword" layoutX="239.0" layoutY="343.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="320.0" />
             <Label layoutX="241.0" layoutY="256.0" text="Email">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="createEmail" layoutX="240.0" layoutY="276.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="320.0" />
             <Label layoutX="237.0" layoutY="323.0" text="Password">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <TextField fx:id="createMonthDOB" layoutX="237.0" layoutY="410.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="127.0" promptText="Month" />
+            <TextField fx:id="createDayDOB" layoutX="374.0" layoutY="410.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="77.0" promptText="Day" />
+            <TextField fx:id="createYearDOB" layoutX="459.0" layoutY="410.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="97.0" promptText="Year" />
             <TextField fx:id="createAddress" layoutX="239.0" layoutY="471.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="320.0" promptText="Street address" />
             <Label layoutX="239.0" layoutY="512.0" text="City">
                <font>
@@ -86,17 +84,20 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="createMonthDOB" layoutX="237.0" layoutY="410.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="127.0" promptText="Month" />
-            <TextField fx:id="createDayDOB" layoutX="374.0" layoutY="410.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="77.0" promptText="Day" />
-            <TextField fx:id="createYearDOB" layoutX="459.0" layoutY="410.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="97.0" promptText="Year" />
             <Label layoutX="495.0" layoutY="580.0" text="Exp Date">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <TextField fx:id="createExp" layoutX="492.0" layoutY="597.0" onAction="#switchToLogin" prefHeight="25.0" prefWidth="71.0" promptText="MM/YY" />
+            <Button layoutX="340.0" layoutY="652.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="35.0" prefWidth="119.0" text="Enter">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </content>
 </ScrollPane>
+
 
