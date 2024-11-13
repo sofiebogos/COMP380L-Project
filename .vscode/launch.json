@@ -6,10 +6,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReadFile",
+            "request": "launch",
+            "mainClass": "ReadFile",
+            "projectName": "COMP380L-Project_55bd33d9"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Main.java",
-            "vmArgs": "--module-path E:\\javaFXfiles\\openjfx-23_windows-x64_bin-sdk\\javafx-sdk-23\\lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path C:\\Users\\funnj\\OneDrive\\Documents\\GitHub\\COMP380L-Project\\javaFXfiles\\openjfx-23_windows-x64_bin-sdk\\javafx-sdk-23\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
