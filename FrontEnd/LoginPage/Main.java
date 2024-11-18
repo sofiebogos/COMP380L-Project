@@ -20,8 +20,8 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
         Scene scene = new Scene(root);
         root.setStyle("-fx-background-color: white;");
-        stage.setTitle("Car Jams");
-        stage.setHeight(600);
+        stage.setTitle("Jams Auto Sales");
+        stage.setHeight(500);
         stage.setWidth(800);
         stage.setScene(scene);
         stage.show(); //stage pops up 
