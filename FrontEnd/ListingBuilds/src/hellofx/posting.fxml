@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="613.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="613.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="613.0" prefWidth="850.0">
          <children>
@@ -45,21 +45,21 @@
                </font>
             </Label>
             <TextField layoutX="353.0" layoutY="173.0" prefHeight="26.0" prefWidth="98.0" />
-            <ChoiceBox layoutX="210.0" layoutY="102.0" prefHeight="26.0" prefWidth="66.0" />
-            <ChoiceBox layoutX="336.0" layoutY="102.0" prefHeight="26.0" prefWidth="170.0" />
-            <ChoiceBox layoutX="170.0" layoutY="173.0" prefHeight="26.0" prefWidth="107.0" />
+            <ChoiceBox fx:id="year" layoutX="210.0" layoutY="102.0" prefHeight="26.0" prefWidth="66.0" />
+            <ChoiceBox fx:id="make" layoutX="336.0" layoutY="102.0" prefHeight="26.0" prefWidth="170.0" />
+            <ChoiceBox fx:id="color" layoutX="170.0" layoutY="173.0" prefHeight="26.0" prefWidth="107.0" />
             <Label layoutX="481.0" layoutY="177.0" text="Condition:">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="561.0" layoutY="174.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="condition" layoutX="561.0" layoutY="174.0" prefWidth="150.0" />
             <Label layoutX="103.0" layoutY="242.0" text="Title Status:">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="184.0" layoutY="238.0" prefHeight="26.0" prefWidth="118.0" />
+            <ChoiceBox fx:id="titleStatus" layoutX="184.0" layoutY="238.0" prefHeight="26.0" prefWidth="118.0" />
             <Label layoutX="335.0" layoutY="240.0" text="Zip Code:">
                <font>
                   <Font size="15.0" />
@@ -83,12 +83,12 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="417.0" layoutY="478.0" mnemonicParsing="false" text="Add">
+            <Button fx:id="addPics" layoutX="417.0" layoutY="478.0" mnemonicParsing="false" text="Add">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Button>
-            <Button layoutX="382.0" layoutY="565.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" text="Post">
+            <Button fx:id="postListing" layoutX="382.0" layoutY="565.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" text="Post">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
