@@ -1,1 +1,1 @@
-FirstName,LastName,Email,Password,DOBMonth,DOBDay,DOBYear,Address,City,State,ZipCode,CardNum,CVC,ExpDate
+firstName,lastName,Email,Password,MonthDOB,DayDOB,YearDOB,Address,City,State,ZIP,Cardnum,CVC,Exp

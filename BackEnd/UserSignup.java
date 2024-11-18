@@ -19,25 +19,23 @@ public class UserSignup {
 
     }
     //Declare variables to user input
-    //Variables do not match frontend code at the moment
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        String FirstName = txtFirstName.getText();
-        String LastName = txtLastName.getText();
-        String Email = txtEmail.getText();
-        String Password = txtPassword.getText();
-        int DOBMonth = Integer.parseInt(txtDOBMonth.getText());
-        int DOBDay = Integer.parseInt(txtDOBDay.getText());
-        int DOBYear = Integer.parseInt(txtDOBYear.getText());
-        String Address = txtAddress.getText();
-        String City = txtCity.getText();
-        String State = txtState.getText();
-        int ZipCode = Integer.parseInt(txtZIPcode.getText());
-        String CardNum = txtCardNum.getText();
-        int CVC = Integer.parseInt(txtCVC.getText());
-        String ExpDate = txtExpDate.getText();
+        String firstName = createFirst.getText();
+        String lastName = createLast.getText();
+        String email2 = createEmail.getText();
+        String password2 = createPassword.getText();
+        String DOBmonth = createMonthDOB.getText();
+        String DOBday = createDayDOB.getText();
+        String DOByear = createYearDOB.getText();
+        String address = createAddress.getText();
+        String city = createCity.getText();
+        String state = createState.getText();
+        String ZIP = createZIP.getText();
+        String cardNumber = createCardnum.getText();
+        String CVC = createCVC.getText();
+        String expDate = createExp.getText();
 
-        //Read and write to file
-        appendToFile("UserSignup.txt", FirstName + "," + LastName + "," + Email + "," + Password + "," + DOBMonth + "," + DOBDay + "," + DOBYear + "," + Address + "," + City + "," + State + "," + ZipCode + "," + CardNum + "," + CVC + "," + ExpDate);
+        UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email2 + ";" + password2 + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
     }
 
     public static void appendToFile(String filename, String content) {
@@ -48,10 +46,11 @@ public class UserSignup {
                 Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 System.out.println("Successfully wrote to the file.");
             }
-          //Exception message if writing to file fails
+            //Exception message if writing to file fails
         } catch (IOException e) {
             System.err.println("An error occurred while writing to the file: " + e.getMessage());
         }
     }
 }
+
 
