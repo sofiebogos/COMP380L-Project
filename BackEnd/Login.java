@@ -8,27 +8,27 @@ public class Login {
         String correctEmail = "jams03@gmail.com";
         String correctPassword = "Mcqueen101";
         String filename = "UserSignup.txt";
-        String FirstName = "Jams";
-        String LastName = "Jameson";
+        String firstName = "Jams";
+        String lastName = "Jameson";
         String Email = "jams03@gmail.com";
         String Password = "Mcqueen101";
-        int DOBMonth = 10;
-        int DOBDay = 20;
-        int DOBYear = 2003;
+        int MonthDOB = 10;
+        int DayDOB = 20;
+        int YearDOB = 2003;
         String Address = "12345 Street Drive";
         String City = "Los Angeles";
         String State = "CA";
-        int ZipCode = 90123;
-        String CardNum = "1234 5678 9000";
+        int ZIP = 90123;
+        String Cardnum = "1234 5678 9000";
         int CVC = 123;
-        String ExpDate = "10/29";
+        String Exp = "10/29";
 
         String content = "";
 
         //Content to declared variables
-        content = content + '\n' + FirstName + ", " + LastName + ", " + Email + ", " + Password + ", " +
-                DOBMonth + ", " + DOBDay + ", " + DOBYear + ", " + Address + ", " + City + ", " + State +
-                ", " + ZipCode + ", " + CardNum + ", " + CVC + ", " + ExpDate;
+        content = content + '\n' + firstName + ", " + lastName + ", " + Email + ", " + Password + ", " +
+                MonthDOB + ", " + DayDOB + ", " + MonthDOB + ", " + Address + ", " + City + ", " + State +
+                ", " + ZIP + ", " + Cardnum + ", " + CVC + ", " + Exp;
 
         Scanner input = new Scanner(System.in);
 
@@ -55,3 +55,4 @@ public class Login {
         input.close();
     }
 }
+
