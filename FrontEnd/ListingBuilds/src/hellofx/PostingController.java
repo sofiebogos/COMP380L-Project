@@ -1,28 +1,30 @@
-// package hellofx;
+package hellofx;
 
-// import javafx.fxml.FXML;
-// import javafx.scene.control.Button;
-// import javafx.scene.control.Label;
-// import javafx.scene.image.ImageView;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
-// public class Controller {
+public class PostingController implements Initializable {
 
-//     @FXML
-//     private Label label;
+    @FXML
+    private ChoiceBox<Integer> year;
 
-//     public void initialize() {
-//         String javaVersion = System.getProperty("java.version");
-//         String javafxVersion = System.getProperty("javafx.version");
-//         label.setText("Hello, JavaFX " + javafxVersion + "\nRunning on Java " + javaVersion + ".");
-//     }
+    private int[] years = new int[100];
 
-    
+    for (int i = 0; i < 100; i++){
+        years[i] = 2000;
+    }
 
-//     public void nextImage(){
 
-//     }
 
-//     public void previousImage(){
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1){
+        
+    }
 
-//     }
-// }
+}
