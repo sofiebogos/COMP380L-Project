@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "type": "java",
             "name": "Main",
             "request": "launch",
@@ -23,7 +32,7 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Main.java",
-            "vmArgs": "--module-path C:\\Users\\funnj\\OneDrive\\Documents\\GitHub\\COMP380L-Project\\javaFXfiles\\openjfx-23_windows-x64_bin-sdk\\javafx-sdk-23\\lib --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path E:\\javaFXfiles\\openjfx-23_windows-x64_bin-sdk\\javafx-sdk-23\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
