@@ -1,6 +1,5 @@
 package hellofx;
 
-import java.awt.Button;
 import java.awt.Choice;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,10 +44,10 @@ public class PostingController implements Initializable {
     private static String[] conditions;
     private static String[] listTitleStatus;
 
-    public static void populateLists(){
         /**
-         * This method populates the arrays used to provide the info for the Choice Boxes
+         * This method populates the arrays used to provide the info for the Choice Boxes.
          */
+    public static void populateLists(){
         years = SellCarData.getYears();
         makes = SellCarData.getMakes();
         colors = SellCarData.getColors();
@@ -58,13 +57,12 @@ public class PostingController implements Initializable {
     
 
 
-
+        /**
+         * This method Overrides the Initilize method in the parent interface.
+         * This method also passes along the correct arrays with the corresponding Choice Boxes.
+         */
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
-        /**
-         * This method Overrides the Initilize method in the parent interface
-         * This method also passes along the correct arrays with the corresponding Choice Boxes
-         */
         year.getItems().addAll(years);
         make.getItems().addAll(makes);
         color.getItems().addAll(colors);

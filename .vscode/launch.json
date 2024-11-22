@@ -5,27 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
-        },
-        {
             "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "hellofx.Main",
             "projectName": "COMP380L-Project_5409fc63"
-        },
-        {
-            "type": "java",
-            "name": "ReadFile",
-            "request": "launch",
-            "mainClass": "ReadFile",
-            "projectName": "COMP380L-Project_55bd33d9"
         },
         {
             "type": "java",

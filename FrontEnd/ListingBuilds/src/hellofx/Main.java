@@ -24,6 +24,7 @@ import javafx.scene.Parent;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+
 // **Extra Stage methods**
 // myStage.setWidth(420);
 // myStage.setHeight(420);
@@ -85,10 +86,26 @@ import java.util.Iterator;
 // imageView.setY(200);
 // root.getChildren().add(imageView);
 
+/**
+	 * This class is used as the main starting point to Launch the javafx GUI.
+	 * This class extends the Application class that exists within the javafx module.
+	 */
+
 public class Main extends Application {
+	
+	/**
+	 * temporary ArrayList of images for testing purposes.
+	 */
 	public static ArrayList<Image> mcQueenPics = new ArrayList<>();
+	/**
+	 * temporary ArrayList Iterator for testing purposes.
+	 */
 	public static Iterator<Image> mcQueenIterator = mcQueenPics.iterator(); 
 
+		/**
+		 * This method Overrides the start method of the parent class.
+		 * This method is used to set the required javafx elements to display a window.
+		 */
 	@Override
 	public void start(Stage myStage)throws Exception{
 		Image icon = new Image("CarPics\\luigi.gif");
@@ -111,6 +128,9 @@ public class Main extends Application {
 	}
 
 
+		/**
+		 * The starting point of the entire Application (Launches the Application).
+		 */
     public static void main(String[] args) {
 		makeDefaultList();
 		PostingController.populateLists();
