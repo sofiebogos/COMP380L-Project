@@ -7,16 +7,16 @@ package hellofx;
  */
 
 public class SellCarData {
-    private static int yearCount = 1974;
-    private static Integer[] years = new Integer[50];
+    private static int yearCount = 2026;
+    private static Integer[] years = new Integer[100];
     
         /**
          * This method populates and returns the years array.
          * @return years
          */
     public static Integer[] getYears(){
-        for (int i = 0; i < 50; i++){
-            yearCount++;
+        for (int i = 0; i < 100; i++){
+            yearCount--;
             years[i] = yearCount;
         }
         return years;

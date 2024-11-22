@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
@@ -23,15 +24,15 @@ import javafx.scene.image.ImageView;
 public class PostingController implements Initializable {
 
     @FXML
-    private ChoiceBox<Integer> year;
+    private ComboBox<Integer> year;
     @FXML
-    private ChoiceBox<String> make;
+    private ComboBox<String> make;
     @FXML
-    private ChoiceBox<String> color;
+    private ComboBox<String> color;
     @FXML
-    private ChoiceBox<String> condition;
+    private ComboBox<String> condition;
     @FXML
-    private ChoiceBox<String> titleStatus;
+    private ComboBox<String> titleStatus;
     @FXML
     private Button addPics;
     @FXML
