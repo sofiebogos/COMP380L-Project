@@ -23,7 +23,7 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Main.java",
-            "vmArgs": "--module-path C:\\Users\\jason\\Downloads\\openjfx-23.0.1_windows-x64_bin-sdk\\javafx-sdk-23.0.1\\lib --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path E:\\javaFXfiles\\openjfx-23_windows-x64_bin-sdk\\javafx-sdk-23\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
