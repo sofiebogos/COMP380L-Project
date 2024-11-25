@@ -27,7 +27,9 @@ import javafx.scene.image.ImageView;
 public class PostNewCarController implements Initializable {
 
     @FXML
-    private ComboBox<Integer> year, make, color, condition, titleStatus;
+    private ComboBox<Integer> year;
+    @FXML
+    private ComboBox<String> make, color, condition, titleStatus;
     @FXML
     private Button addPics, postListing;
 
