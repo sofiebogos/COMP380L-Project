@@ -36,6 +36,9 @@ public class ReadFile {
         if (filename == "listing.txt") {
             ReadListing();
         }
+        if (filename == "account.txt") {
+            ReadAccount();
+        }
 
     }
 
@@ -72,7 +75,8 @@ public class ReadFile {
      * Splits it into an array, then passes the array to the constructor
      */
 
-    public static void ReadAccount(String filename) {
+    public static void ReadAccount() {
+        String filename = "account.txt";
         try {
             File file = new File(filename);
             Scanner myReader = new Scanner(file);
