@@ -133,6 +133,7 @@ public class controller implements Initializable{
         System.out.println("You have successfully logged in!"); 
         System.out.println("Email: " + email);
         System.out.println("Password: " + password);
+        ReadFile.ReadAccount("UserSignup.txt");
 
         root = FXMLLoader.load(getClass().getResource("home.fxml"));
         stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
