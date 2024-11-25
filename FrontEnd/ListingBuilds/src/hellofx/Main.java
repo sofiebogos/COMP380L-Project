@@ -112,7 +112,7 @@ public class Main extends Application {
 		myStage.getIcons().add(icon);
 		myStage.setTitle("Jams Auto Sales");
 
-		Parent root = FXMLLoader.load(getClass().getResource("allListings.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("PostNewCar.fxml"));
 
 		Scene scene = new Scene(root, Color.GRAY);
 		myStage.setScene(scene);
