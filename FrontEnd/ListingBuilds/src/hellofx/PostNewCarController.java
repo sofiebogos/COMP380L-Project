@@ -1,7 +1,10 @@
 package hellofx;
 
 import java.awt.Choice;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,29 +24,16 @@ import javafx.scene.image.ImageView;
  * @param listTitleStatus The array of title status choices.
  */
 
-public class PostingController implements Initializable {
+public class PostNewCarController implements Initializable {
 
     @FXML
-    private ComboBox<Integer> year;
+    private ComboBox<Integer> year, make, color, condition, titleStatus;
     @FXML
-    private ComboBox<String> make;
-    @FXML
-    private ComboBox<String> color;
-    @FXML
-    private ComboBox<String> condition;
-    @FXML
-    private ComboBox<String> titleStatus;
-    @FXML
-    private Button addPics;
-    @FXML
-    private Button postListing;
+    private Button addPics, postListing;
 
     private static boolean hasInitialized = true;
     private static Integer[] years;
-    private static String[] makes;
-    private static String[] colors;
-    private static String[] conditions;
-    private static String[] listTitleStatus;
+    private static String[] makes, colors, conditions, listTitleStatus;
 
         /**
          * This method populates the arrays used to provide the info for the Choice Boxes.
@@ -54,6 +44,14 @@ public class PostingController implements Initializable {
         colors = SellCarData.getColors();
         conditions = SellCarData.getConditions();
         listTitleStatus = SellCarData.getTitleStatus();
+    }
+
+    public void addCarPics(ActionEvent e){
+        ArrayList<Image> tempList;
+    }
+
+    public void postCar(ActionEvent e){
+        
     }
     
 

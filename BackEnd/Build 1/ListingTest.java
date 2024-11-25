@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import java.awt.Image;
 import javafx.scene.image.*;
@@ -17,7 +19,7 @@ public class ListingTest { // While some variables are ints, ONLY pass strings
     public ListingTest(Account owner, int  ID, String year, String make,
                         String model, String color, String mileage,
                         String condition, String titleStatus, String zip,
-                        String price, String desc                           ) {
+                        String price, String desc                        ) {
 
         this.owner = owner;
         this.ID = ID;
@@ -56,8 +58,8 @@ public class ListingTest { // While some variables are ints, ONLY pass strings
 
     // this is the getter for the passed along Strings of the listing Object
     public String[] getVars() { 
-        return new String[]{year, make, model, color, mileage, 
-                            condition, titleStatus, zip, desc }; 
+        return new String[]{condition, titleStatus, year, make, model,
+                            mileage, zip, price, desc, color,         }; 
         // Return as array
     }
 

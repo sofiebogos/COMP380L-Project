@@ -21,6 +21,7 @@ public class ListingManager {
             if (tempList.getID() == id){
                 return tempList;
             }
+            else{}
         }
         return null;
     }
