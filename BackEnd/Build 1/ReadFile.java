@@ -14,7 +14,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class ReadFile {
     public static List<car> carList = new ArrayList<>();
     public static List<Listing> listingList = new ArrayList<>();
-    public static List<Account> accoubtList = new ArrayList<>();
+    public static List<Account> accountList = new ArrayList<>();
 
     /**
      * @param args
