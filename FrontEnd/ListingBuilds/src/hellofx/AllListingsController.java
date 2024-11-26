@@ -24,13 +24,17 @@ public class AllListingsController{
     
     public void addListing(){
         VBox temp = initial;
+        AnchorPane tempAnchorPane = (AnchorPane) temp.getChildren().get(0);
+
+       ((Label) (tempAnchorPane.getChildren().get(1))).setText("hello");
         //AnchorPane tempPane = temp.getChildren(0)
         temp.setId("VB" + Integer.toString((int)Math.random()));
-        temp.getChildren().get(0).setId("AP" + Integer.toString((int)Math.random()));
-        ((AnchorPane) temp.getChildren().get(0)).getChildren().get(0).setId("Pic" + Integer.toString((int)Math.random()));
-        ((AnchorPane) temp.getChildren().get(0)).getChildren().get(1).setId("YMM" + Integer.toString((int)Math.random()));
-        ((AnchorPane) temp.getChildren().get(0)).getChildren().get(2).setId("Price" + Integer.toString((int)Math.random()));
-        ((AnchorPane) temp.getChildren().get(0)).getChildren().get(3).setId("B" + Integer.toString((int)Math.random()));
-        flowPaneRoot.getChildren().add(temp);
+        temp.getChildren().get(1).setId("AP" + Integer.toString((int)Math.random()));
+        // ((AnchorPane) temp.getChildren().get(0)).getChildren().get(0).setId("Pic" + Integer.toString((int)Math.random()));
+        // ((AnchorPane) temp.getChildren().get(0)).getChildren().get(1).setId("YMM" + Integer.toString((int)Math.random()));
+        // ((AnchorPane) temp.getChildren().get(0)).getChildren().get(2).setId("Price" + Integer.toString((int)Math.random()));
+        // ((AnchorPane) temp.getChildren().get(0)).getChildren().get(3).setId("B" + Integer.toString((int)Math.random()));
+       //((Label) ((AnchorPane) temp.getChildren().get(0)).getChildren().get(4)).setText("hello");
+        //flowPaneRoot.getChildren().add(temp);
     }
 }
