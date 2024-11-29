@@ -2,6 +2,22 @@ import java.util.Scanner;
 
 public class Login {
 
+    public static boolean checkLogin(String email, String password){
+        List<Account> accounts = new ArrayList<>();
+        ReadFile.ReadAccount(accounts);
+        for(int i = 0; i < accounts.size(); i++){
+           Account account = accounts.get(i);
+           String correctEmail = account.getEmail();
+           String correctPassword = account.getPassword();
+           if (email.equals(correctEmail) && password.equals(correctPassword)) {
+                System.out.println("Welcome!");
+                return true;
+            } 
+        }
+        return false;
+    }
+    
+
     public static void main(String[] args) {
 
         //Declare variables
