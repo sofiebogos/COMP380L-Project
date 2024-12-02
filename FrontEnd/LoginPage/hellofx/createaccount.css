@@ -1,0 +1,87 @@
+.scroll-pane{
+    -fx-background-color: #d8d9df;
+}
+.scroll-pane .viewport{
+    -fx-background-color: #d8d9df;
+}
+#rectangle{
+    -fx-effect: dropshadow(gaussian, #9c9cad, 20, .5, 1, 1);
+}
+#enter{
+    -fx-background-color: #d8d9df;
+}
+#createFirst{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createLast{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createEmail{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createPassword{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createAddress{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createCity{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createState{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createZIP{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createCardnum{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createCVC{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createExp{
+    -fx-border-color: #d8d9df;     
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createMonth{
+    -fx-background-color: #d8d9df;
+}
+#createDay{
+    -fx-background-color: #d8d9df;
+}
+#createYear{
+-fx-background-color: #d8d9df;
+}
