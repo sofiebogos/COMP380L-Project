@@ -10,18 +10,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.AllListingsController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.AllListingsController">
    <content>
-      <FlowPane fx:id="flowPaneRoot" alignment="TOP_CENTER" columnHalignment="CENTER" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0">
+      <FlowPane fx:id="flowPaneRoot" alignment="TOP_CENTER" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" prefWrapLength="0.0" vgap="5.0">
          <children>
             <Button fx:id="testAdd" mnemonicParsing="false" onAction="#addListing" text="test add">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Button>
-            <VBox fx:id="initial" prefHeight="175.0" prefWidth="800.0">
+            <VBox fx:id="initialVBox" prefHeight="175.0" prefWidth="800.0">
                <children>
-                  <AnchorPane prefHeight="175.0" prefWidth="800.0" style="-fx-border-color: gray; -fx-border-width: 2; -fx-border-style: solid;">
+                  <AnchorPane fx:id="initialAnchorPane" prefHeight="175.0" prefWidth="800.0" style="-fx-border-color: gray; -fx-border-width: 2; -fx-border-style: solid;">
                      <children>
                         <ImageView fitHeight="152.0" fitWidth="256.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
