@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.controller">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeType="INSIDE" width="1280.0">
+               <fill>
+                  <RadialGradient centerX="0.6808119629581917" centerY="0.5" radius="0.6">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8187134265899658" green="0.8615984320640564" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.4627451002597809" green="0.5686274766921997" blue="0.6784313917160034" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill></Rectangle>
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" height="439.0" layoutX="691.0" layoutY="83.0" stroke="TRANSPARENT" strokeLineCap="ROUND" width="394.0">
+               <fill>
+                  <RadialGradient centerX="0.7177121911981449" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Rectangle>
+            <TextField fx:id="emailtext" layoutX="825.0" layoutY="214.0" onAction="#Enter" prefHeight="36.0" prefWidth="191.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordtext" layoutX="825.0" layoutY="304.0" onAction="#Enter" prefHeight="36.0" prefWidth="191.0" />
+            <Label layoutX="747.0" layoutY="219.0" text="Email">
+               <font>
+                  <Font name="Lucida Fax Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="707.0" layoutY="300.0" text="Password">
+               <font>
+                  <Font name="Lucida Fax Regular" size="20.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="createhyper" layoutX="746.0" layoutY="440.0" onAction="#switchToCreateAcc" prefHeight="35.0" prefWidth="283.0" text="New? Click here to create an account" textFill="#6fc5c9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="40.0" fitWidth="83.0" layoutX="1085.0" layoutY="523.0" opacity="0.54">
+               <image>
+                  <Image url="@Lightning_McQueen.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="enter" layoutX="802.0" layoutY="376.0" mnemonicParsing="false" onAction="#Enter" prefHeight="35.0" prefWidth="171.0" text="Enter">
+               <font>
+                  <Font name="Lucida Fax Regular" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="jams" layoutX="256.0" layoutY="122.0" text="Jam's" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Fax Demibold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="auto" layoutX="207.0" layoutY="187.0" text="Auto" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Fax Demibold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="sales" layoutX="313.0" layoutY="187.0" text="Sales" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Fax Demibold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="signin" alignment="CENTER" layoutX="120.0" layoutY="262.0" prefHeight="59.0" prefWidth="387.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Fax Demibold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="691.0" layoutY="150.0" prefHeight="33.0" prefWidth="393.0" text="Sign In">
+               <font>
+                  <Font name="Lucida Fax Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
