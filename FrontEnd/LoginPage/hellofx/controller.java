@@ -67,12 +67,22 @@ public class controller {
         String cardNumber = createCardnum.getText();
         String CVC = createCVC.getText(); 
         String expDate = createExp.getText();
+        
+        UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email2 + ";" + password2 + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
         stage.setScene(scene);
         stage.show();
     }
 
     public void switchToCreateAcc(ActionEvent event) throws IOException{
         root = FXMLLoader.load(getClass().getResource("createaccount.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToSignin (ActionEvent event ) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -87,13 +97,18 @@ public class controller {
     private TextField passwordtext;
  
     @FXML
-    public void Enter(ActionEvent e) {
+    public void Enter(ActionEvent e) throws IOException {
         String email = emailtext.getText();
         String password = passwordtext.getText();
-
         System.out.println("You have successfully logged in!"); 
         System.out.println("Email: " + email);
         System.out.println("Password: " + password);
+        root = FXMLLoader.load(getClass().getResource("home.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
     

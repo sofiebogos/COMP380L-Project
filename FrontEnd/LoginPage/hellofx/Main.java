@@ -16,15 +16,15 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+    public void start(Stage stage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
         Scene scene = new Scene(root);
-     
-        primaryStage.setTitle("Car Shop");
-        primaryStage.setHeight(500);
-        primaryStage.setWidth(700);
-        primaryStage.setScene(scene);
-        primaryStage.show(); //stage pops up 
+        root.setStyle("-fx-background-color: white;");
+        stage.setTitle("Jams Auto Sales");
+        stage.setHeight(500);
+        stage.setWidth(800);
+        stage.setScene(scene);
+        stage.show(); //stage pops up 
     }
 
 

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReadFile",
+            "request": "launch",
+            "mainClass": "ReadFile",
+            "projectName": "COMP380L-Project_55bd33d9"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Main.java",

@@ -93,9 +93,9 @@ public class Main extends Application {
 	public void start(Stage myStage)throws Exception{
 		Image icon = new Image("CarPics\\luigi.gif");
 		myStage.getIcons().add(icon);
-		myStage.setTitle("Jams Car Sales");
+		myStage.setTitle("Jams Auto Sales");
 
-		Parent root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("posting.fxml"));
 
 		Scene scene = new Scene(root, Color.GRAY);
 		myStage.setScene(scene);
