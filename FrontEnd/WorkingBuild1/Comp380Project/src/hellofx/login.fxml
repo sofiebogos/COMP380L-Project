@@ -37,9 +37,9 @@
                   </RadialGradient>
                </fill>
             </Rectangle>
-            <Rectangle fx:id="topbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="81.0" layoutX="-1.0" layoutY="-9.0" stroke="#dbdbdb" strokeType="INSIDE" strokeWidth="1.5" width="1283.0" />
+            <Rectangle fx:id="topbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="70.0" layoutX="-1.0" layoutY="-9.0" stroke="#dbdbdb" strokeType="INSIDE" strokeWidth="1.5" width="1283.0" />
             <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="537.0" layoutX="569.0" layoutY="138.0" stroke="WHITE" strokeType="INSIDE" width="550.0" />
-            <Label layoutX="123.0" layoutY="21.0" prefHeight="29.0" prefWidth="135.0" text="JAMS AUTO SALES ">
+            <Label layoutX="121.0" layoutY="16.0" prefHeight="29.0" prefWidth="135.0" text="JAMS AUTO SALES ">
                <font>
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
@@ -56,32 +56,32 @@
                   <Font name="Lucida Bright" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="Search" layoutX="368.0" layoutY="21.0" text="Search">
+            <Hyperlink fx:id="Search" layoutX="367.0" layoutY="17.0" text="Search">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="21.0" text="Cars For Sale">
+            <Hyperlink fx:id="carsforsale" layoutX="533.0" layoutY="17.0" text="Cars for Sale">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="sellacar" layoutX="748.0" layoutY="22.0" text="Sell a Car">
+            <Hyperlink fx:id="sellacar" layoutX="748.0" layoutY="17.0" text="Sell a Car">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="signin" layoutX="1150.0" layoutY="22.0" text="Sign In">
+            <Hyperlink fx:id="signin" layoutX="1147.0" layoutY="17.0" text="Sign In">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <ImageView fitHeight="45.0" fitWidth="109.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="43.0" fitWidth="107.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resizedlogo.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="1103.0" layoutY="20.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="1103.0" layoutY="15.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@signinicon.png" />
                </image>

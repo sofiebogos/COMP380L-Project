@@ -33,7 +33,9 @@ public class controller implements Initializable{
                       createZIP, createCardnum, createCVC, createExp;
     
     @FXML
-    private PasswordField paswordText;
+    private PasswordField createPassword, confirmPassword;
+    @FXML
+    private Label matcherror;
 
     @FXML
     private ComboBox<String> createMonth;
@@ -53,8 +55,9 @@ public class controller implements Initializable{
     public void switchToLogin(ActionEvent enter) throws IOException{
         String firstName = createFirst.getText();
         String lastName = createLast.getText();
-        String email2 = createEmail.getText();
-        String password2 = createPassword.getText();
+        String email = createEmail.getText();
+        String password = createPassword.getText();
+        String password2 = confirmPassword.getText();
         String DOBmonth = createMonth.getValue();
         Integer DOBday = createDay.getValue();
         Integer DOByear = createYear.getValue();
@@ -65,16 +68,20 @@ public class controller implements Initializable{
         String cardNumber = createCardnum.getText();
         String CVC = createCVC.getText(); 
         String expDate = createExp.getText();
-    
-        UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email2 + ";" + password2 + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
 
-        root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("login.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
+        if(password.equals(password2)){
+            UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + password + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
+            root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            String css = this.getClass().getResource("login.css").toExternalForm();
+            scene.getStylesheets().add(css);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else
+            matcherror.setText("The passwords you entered do not match.");
+        
     }
 
     /**
@@ -86,6 +93,8 @@ public class controller implements Initializable{
         root = FXMLLoader.load(getClass().getResource("createaccount.fxml"));
         stage = (Stage)((Node)hyperlink.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        String css = this.getClass().getResource("createaccount.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
