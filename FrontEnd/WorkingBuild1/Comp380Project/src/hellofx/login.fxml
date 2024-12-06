@@ -15,101 +15,102 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.controller">
+<ScrollPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.controller">
    <content>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeType="INSIDE" width="1280.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="675.0" layoutY="45.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0">
                <fill>
-                  <RadialGradient centerX="0.6808119629581917" centerY="0.5" radius="0.6">
+                  <RadialGradient centerX="0.18265683360645252" centerY="0.5" radius="0.5">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="0.8187134265899658" green="0.8615984320640564" blue="0.9473684430122375" />
+                              <Color red="0.7607843279838562" green="0.929411768913269" blue="0.9921568632125854" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color red="0.4627451002597809" green="0.5686274766921997" blue="0.6784313917160034" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </fill></Rectangle>
-            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" height="439.0" layoutX="691.0" layoutY="83.0" stroke="TRANSPARENT" strokeLineCap="ROUND" width="394.0">
-               <fill>
-                  <RadialGradient centerX="0.7177121911981449" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
+                              <Color red="0.16470588743686676" green="0.49803921580314636" blue="0.7137255072593689" />
                            </color>
                         </Stop>
                      </stops>
                   </RadialGradient>
                </fill>
             </Rectangle>
-            <TextField fx:id="emailtext" layoutX="825.0" layoutY="214.0" onAction="#Enter" prefHeight="36.0" prefWidth="191.0">
+            <Rectangle fx:id="topbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="81.0" layoutX="-1.0" layoutY="-9.0" stroke="#dbdbdb" strokeType="INSIDE" strokeWidth="1.5" width="1283.0" />
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="537.0" layoutX="569.0" layoutY="138.0" stroke="WHITE" strokeType="INSIDE" width="550.0" />
+            <Label layoutX="123.0" layoutY="21.0" prefHeight="29.0" prefWidth="135.0" text="JAMS AUTO SALES ">
                <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <PasswordField fx:id="passwordtext" layoutX="825.0" layoutY="304.0" onAction="#Enter" prefHeight="36.0" prefWidth="191.0" />
-            <Label layoutX="747.0" layoutY="219.0" text="Email">
-               <font>
-                  <Font name="Lucida Fax Regular" size="20.0" />
+                  <Font name="Agency FB Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="707.0" layoutY="300.0" text="Password">
+            <TextField fx:id="emailtext" layoutX="663.0" layoutY="297.0" onAction="#Enter" prefHeight="40.0" prefWidth="361.0" />
+            <PasswordField fx:id="passwordtext" layoutX="663.0" layoutY="408.0" onAction="#Enter" prefHeight="40.0" prefWidth="360.0" />
+            <Button fx:id="enter" layoutX="720.0" layoutY="514.0" mnemonicParsing="false" onAction="#Enter" prefHeight="39.0" prefWidth="227.0" text="Enter">
                <font>
-                  <Font name="Lucida Fax Regular" size="20.0" />
+                  <Font name="Lucida Bright" size="20.0" />
                </font>
-            </Label>
-            <Hyperlink fx:id="createhyper" layoutX="746.0" layoutY="440.0" onAction="#switchToCreateAcc" prefHeight="35.0" prefWidth="283.0" text="New? Click here to create an account" textFill="#6fc5c9">
+            </Button>
+            <Hyperlink fx:id="createhyper" layoutX="695.0" layoutY="595.0" onAction="#switchToCreateAcc" text="New? Click here to create an account">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Lucida Bright" size="16.0" />
                </font>
             </Hyperlink>
-            <ImageView fitHeight="40.0" fitWidth="83.0" layoutX="1085.0" layoutY="523.0" opacity="0.54">
+            <Hyperlink fx:id="Search" layoutX="368.0" layoutY="21.0" text="Search">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="21.0" text="Cars For Sale">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="sellacar" layoutX="748.0" layoutY="22.0" text="Sell a Car">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="signin" layoutX="1150.0" layoutY="22.0" text="Sign In">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="45.0" fitWidth="109.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resizedlogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="1103.0" layoutY="20.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@signinicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="205.0" fitWidth="372.0" layoutX="84.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="782.0" layoutY="173.0" text="Sign In">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="667.0" layoutY="272.0" text="Email:">
+               <font>
+                  <Font name="Lucida Bright" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="663.0" layoutY="383.0" text="Password:">
+               <font>
+                  <Font name="Lucida Bright" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="44.0" layoutX="1236.0" layoutY="687.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Lightning_McQueen.png" />
                </image>
             </ImageView>
-            <Button fx:id="enter" layoutX="802.0" layoutY="376.0" mnemonicParsing="false" onAction="#Enter" prefHeight="35.0" prefWidth="171.0" text="Enter">
-               <font>
-                  <Font name="Lucida Fax Regular" size="18.0" />
-               </font>
-            </Button>
-            <Label fx:id="jams" layoutX="256.0" layoutY="122.0" text="Jam's" textFill="WHITE">
-               <font>
-                  <Font name="Lucida Fax Demibold" size="45.0" />
-               </font>
-            </Label>
-            <Label fx:id="auto" layoutX="207.0" layoutY="187.0" text="Auto" textFill="WHITE">
-               <font>
-                  <Font name="Lucida Fax Demibold" size="45.0" />
-               </font>
-            </Label>
-            <Label fx:id="sales" layoutX="313.0" layoutY="187.0" text="Sales" textFill="WHITE">
-               <font>
-                  <Font name="Lucida Fax Demibold" size="45.0" />
-               </font>
-            </Label>
-            <Label fx:id="signin" alignment="CENTER" layoutX="120.0" layoutY="262.0" prefHeight="59.0" prefWidth="387.0" text="Sign In" textFill="WHITE">
-               <font>
-                  <Font name="Lucida Fax Demibold" size="45.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" layoutX="691.0" layoutY="150.0" prefHeight="33.0" prefWidth="393.0" text="Sign In">
-               <font>
-                  <Font name="Lucida Fax Regular" size="20.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
    </content>
