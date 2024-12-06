@@ -12,17 +12,17 @@
    <content>
       <AnchorPane prefHeight="720.0" prefWidth="1280.0">
          <children>
-            <ImageView fx:id="carPic" fitHeight="218.0" fitWidth="364.0" layoutX="172.0" layoutY="89.0" pickOnBounds="true">
+            <ImageView fx:id="carPic" fitHeight="347.0" fitWidth="558.0" layoutX="172.0" layoutY="89.0" pickOnBounds="true">
                <viewport>
                   <Rectangle2D />
                </viewport>
             </ImageView>
-            <Button fx:id="previousCar" layoutX="142.0" layoutY="190.0" mnemonicParsing="false" onAction="#previousImage" text="&lt;">
+            <Button fx:id="previousCar" layoutX="142.0" layoutY="249.0" mnemonicParsing="false" onAction="#previousImage" text="&lt;">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="nextCar" layoutX="536.0" layoutY="184.0" mnemonicParsing="false" onAction="#nextImage" text="&gt;">
+            <Button fx:id="nextCar" layoutX="730.0" layoutY="248.0" mnemonicParsing="false" onAction="#nextImage" text="&gt;">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
@@ -32,37 +32,37 @@
                   <Font name="Arial Black" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="condition" layoutX="172.0" layoutY="318.0" prefHeight="18.0" prefWidth="67.0" text="Condition">
+            <Label fx:id="condition" layoutX="171.0" layoutY="456.0" prefHeight="18.0" prefWidth="67.0" text="Condition">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="yearMakeModel" layoutX="172.0" layoutY="347.0" text="Year Make Model">
+            <Label fx:id="yearMakeModel" layoutX="171.0" layoutY="489.0" text="Year Make Model">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="mileage" layoutX="172.0" layoutY="405.0" text="Mileage">
+            <Label fx:id="mileage" layoutX="171.0" layoutY="526.0" text="Mileage">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="price" layoutX="171.0" layoutY="479.0" text="Price">
+            <Label fx:id="price" layoutX="170.0" layoutY="581.0" text="Price">
                <font>
                   <Font name="Arial Bold" size="28.0" />
                </font>
             </Label>
-            <Label fx:id="titleStatus" layoutX="354.0" layoutY="318.0" prefHeight="18.0" prefWidth="76.0" text="Title Status">
+            <Label fx:id="titleStatus" layoutX="360.0" layoutY="456.0" prefHeight="18.0" prefWidth="76.0" text="Title Status">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="zip" layoutX="354.0" layoutY="404.0" text="Zip Code">
+            <Label fx:id="zip" layoutX="336.0" layoutY="526.0" text="Zip Code">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="desc" alignment="TOP_LEFT" layoutX="171.0" layoutY="554.0" prefHeight="148.0" prefWidth="390.0" text="Description" />
+            <Label fx:id="desc" alignment="TOP_LEFT" layoutX="172.0" layoutY="632.0" prefHeight="29.0" prefWidth="390.0" text="Description" />
             <Button fx:id="backButton" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" textFill="#963e3e">
                <font>
                   <Font name="Arial" size="12.0" />
