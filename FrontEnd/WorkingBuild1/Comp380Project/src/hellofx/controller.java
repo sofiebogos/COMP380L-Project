@@ -35,7 +35,7 @@ public class controller implements Initializable{
     @FXML
     private PasswordField createPassword, confirmPassword;
     @FXML
-    private Label matcherror;
+    private Label matcherror, emptyfield;
 
     @FXML
     private ComboBox<String> createMonth;
@@ -69,7 +69,17 @@ public class controller implements Initializable{
         String CVC = createCVC.getText(); 
         String expDate = createExp.getText();
 
-        if(password.equals(password2)){
+        String[] textFields = {firstName, lastName, email, password, password2, DOBmonth,address, city, state, ZIP, cardNumber, CVC, expDate};
+        boolean empty = false;
+        for(int i=0; i<13; i++){
+            if(textFields[i].isEmpty() || DOBday == null || DOByear == null){
+                empty = true;
+                emptyfield.setText("Please fill out all required fields.");
+                break;
+            }
+        }
+        matcherror.setText("");
+        if(password.equals(password2) && empty==false){
             UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + password + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
             root = FXMLLoader.load(getClass().getResource("login.fxml"));
             stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
@@ -79,9 +89,13 @@ public class controller implements Initializable{
             stage.setScene(scene);
             stage.show();
         }
-        else
+        else if(!password.equals(password2) && empty==false){
             matcherror.setText("The passwords you entered do not match.");
-        
+            emptyfield.setText("");
+        }
+        else if(!password.equals(password2) && empty == true)
+            matcherror.setText("The passwords you entered do not match.");
+
     }
 
     /**
