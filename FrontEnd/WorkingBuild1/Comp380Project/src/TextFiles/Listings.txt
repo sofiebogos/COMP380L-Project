@@ -1,0 +1,17 @@
+2023;Mazda;3;grey;22000;used;clean title;93536;30000;The greatest car of all time and is only owned by the greatest person of all time.
+2021;Tesla;Model 3;white;12000;new;clean title;11234;45000;An electric car with cutting-edge technology, long battery life, and minimal mileage.
+2020;Subaru;Outback;green;25000;used;clean title;22345;22000;All-wheel drive, perfect for outdoor adventures with a spacious interior.
+2019;Mazda;CX-5;blue;40000;used;clean title;33456;21000;A stylish and reliable crossover SUV with excellent handling and fuel economy.
+2022;Mercedes-Benz;GLC;black;18000;used;clean title;44567;55000;A luxury SUV with premium features, a smooth ride, and low mileage.interior
+2021;Chevrolet;Tahoe;red;3000;new;clean title;55678;65000;A brand-new full-size SUV with ample seating and towing capacity, perfect for families.
+2020;Jeep;Wrangler;orange;22000;used;clean title;66789;32000;Off-road ready, with an iconic design and rugged features for outdoor enthusiasts.
+2018;Ford;F-150;silver;70000;used;clean title;77890;23000;A tough and reliable full-size truck, ready for work or weekend adventures.
+2019;Hyundai;Tucson;blue;33000;used;clean title;88901;17000;A compact SUV with great fuel efficiency and a comfortable ride.
+2021;Volkswagen;Golf;yellow;15000;used;clean title;99012;25000;A sporty hatchback with impressive handling and modern tech features.
+2022;Porsche;Cayenne;white;10000;used;clean title;10123;70000;A high-performance luxury SUV with great acceleration and advanced interior amenities.
+2020;Ram;1500;black;45000;used;clean title;21234;30000;A full-size pickup truck with a smooth ride and excellent towing capacity.
+2021;BMW;330i;grey;22000;used;clean title;32345;40000;A luxury sedan with advanced features, great handling, and low miles.
+2023;Toyota;RAV4;red;8000;new;clean title;43456;35000;A versatile and efficient SUV with modern tech and excellent fuel economy.
+2022;Honda;Pilot;blue;12000;new;clean title;54567;47000;A three-row SUV with plenty of space, advanced safety features, and low mileage.
+2024;Lexus;IS 500;grey;0;new;clean title;65678;42000;A luxury SUV with premium features, a comfortable cabin, and no miles.
+2020;Kia;Seltos;white;28000;used;clean title;76789;23000;A compact SUV with modern tech, great fuel economy, and an affordable price.

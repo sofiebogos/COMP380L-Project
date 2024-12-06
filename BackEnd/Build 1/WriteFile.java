@@ -7,10 +7,12 @@ import java.nio.file.StandardOpenOption;
 
 public class WriteFile {
 
-    // --------------------------------------------------------------------------------------------------------
-    // Overwrite File will completely over write any exisiting file named the same.
-    // Use this only if you want to clear bad data!
-    // --------------------------------------------------------------------------------------------------------
+    /**
+     * This will overwrite the ENTIRE file that it is saving to
+     * should only be used to clear out bad data
+     * takes @param filename which is the file and @param content which is what's to
+     * be saved
+     */
 
     public static void overWriteFile(String filename, String content) {
         Path path = Paths.get(filename);
@@ -23,10 +25,14 @@ public class WriteFile {
         }
     }
 
-    // --------------------------------------------------------------------------------------------------------
-    // This just appends a new line to whatever is in the file
-    // It uses compare to not add duplicates
-    // --------------------------------------------------------------------------------------------------------
+    /**
+     * Appends a line to the end of a save file
+     * USes the compare function from readfile to make sure that it isn't adding the
+     * same line over and over and over
+     * takes @param filename which is the file and @param content which is what's to
+     * be saved
+     */
+
     public static void appendToFile(String filename, String content) {
         Path path = Paths.get(filename);
 
@@ -41,6 +47,9 @@ public class WriteFile {
         }
     }
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
 
     }

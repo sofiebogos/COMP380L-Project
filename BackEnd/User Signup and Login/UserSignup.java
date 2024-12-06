@@ -42,7 +42,8 @@ public class UserSignup {
         Path path = Paths.get(filename);
 
         try {
-            if (!ReadFile.Compare(content)) {
+            if (ReadFile.Compare(content, "UserSignup.txt") != true) {
+                content = content + "\n";
                 Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 System.out.println("Successfully wrote to the file.");
             }
