@@ -4,35 +4,35 @@ import java.util.Scanner;
 
 public class Login {
     private String userEmail, userPassword, filename, firstName, lastName, address, city, state, cardNumber, expirationDate;
-    private int monthOfBirth, dayOfBirth, yearOfBirth, zipCode, cvcCode;
+    private int MonthDOB, DayDOB, YearDOB, zipCode, cvcCode;
 
     public static void main(String[] args) {
 
         //Declare variables
-        String correctEmail = "jams03@gmail.com";
-        String correctPassword = "Mcqueen101";
-        String filename = "UserSignup.txt";
-        String firstName = "Jams";
-        String lastName = "Jameson";
-        String Email = "jams03@gmail.com";
-        String Password = "Mcqueen101";
-        int MonthDOB = 10;
-        int DayDOB = 20;
-        int YearDOB = 2003;
-        String Address = "12345 Street Drive";
-        String City = "Los Angeles";
-        String State = "CA";
-        int ZIP = 90123;
-        String Cardnum = "1234 5678 9000";
-        int CVC = 123;
-        String Exp = "10/29";
+        String correctEmail = "john.doe@example.com";
+        String correctPassword = "password123";
+        String filename = "account.txt";
+        String firstName = "John";
+        String lastName = "Doe";
+        String userEmail = "john.doe@example.com";
+        String userPassword = "password123";
+        int MonthDOB = 01;
+        int DayDOB = 15;
+        int YearDOB = 1990;
+        String address = "123 Main Street";
+        String city = "Los Angeles";
+        String state = "CA";
+        int zipCode = 90001;
+        String cardNumber = "123 5678 789";
+        int cvcCode = 123;
+        String expirationDate = "12/29";
 
         String content = "";
 
         //Content to declared variables
-        content = content + '\n' + firstName + ", " + lastName + ", " + Email + ", " + Password + ", " +
-                MonthDOB + ", " + DayDOB + ", " + MonthDOB + ", " + Address + ", " + City + ", " + State +
-                ", " + ZIP + ", " + Cardnum + ", " + CVC + ", " + Exp;
+        content = content + '\n' + firstName + ", " + lastName + ", " + userEmail + ", " + userPassword + ", " +
+                MonthDOB + ", " + DayDOB + ", " + MonthDOB + ", " + address + ", " + city + ", " + state +
+                ", " + zipCode + ", " + cardNumber + ", " + cvcCode + ", " + expirationDate;
 
         Scanner input = new Scanner(System.in);
 
@@ -97,4 +97,6 @@ public class Login {
 
     }
 }
+
+
 
