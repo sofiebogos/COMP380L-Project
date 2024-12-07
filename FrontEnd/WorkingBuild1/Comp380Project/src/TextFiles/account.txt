@@ -1,0 +1,2 @@
+John;Doe;admin;3360cc9040204000000000;01;15;1990;123 Main Street;Los Angeles;CA;90001;123456789;123;12/29;303249
+John;Doe;john.doe@example.com;password123;01;15;1990;123 Main Street;Los Angeles;CA;90001;123456789;123;12/29;303249
