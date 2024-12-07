@@ -3,6 +3,8 @@ package hellofx;
 import java.util.Scanner;
 
 public class Login {
+    private String userEmail, userPassword, filename, firstName, lastName, address, city, state, cardNumber, expirationDate;
+    private int monthOfBirth, dayOfBirth, yearOfBirth, zipCode, cvcCode;
 
     public static void main(String[] args) {
 
@@ -43,18 +45,56 @@ public class Login {
         String password = input.next();
 
         //Check user email and password input
-        if (username.equals(correctEmail) && password.equals(correctPassword)) {
-            System.out.println("Welcome!");
-        } else if (username.equals(correctEmail)) {
-            System.out.println("Invalid Password");
-        } else if (password.equals(correctPassword)) {
-            System.out.println("Invalid Email");
-        } else {
-            System.out.println("Invalid Email and Password");
-        }
+
+
 
         //Close scanner
         input.close();
+    }
+
+    public static boolean auth(String email, String password){
+        String salt = AccountManager.getSalt(email);
+        if (salt == null){
+            System.out.println("Wrong Email");
+            return false; 
+        }
+        if (authHelper(email, password, salt) == true){
+            System.out.println("Welcome!");
+            return true; 
+        } else {
+            System.out.println("Invalid Password");
+            return false; 
+        }
+    }
+
+    public static boolean authHelper(String userEmail, String userPassword, String salt) {
+        String finalPass = VeryBadHash(userPassword, salt);
+        String toFind = userEmail + ";" + finalPass; 
+        String result = ReadFile.FindAndReturn(toFind, "account");
+        return !result.equals("0");
+    }
+
+    public static String VeryBadHash(String text, String salt){
+        try {
+            text = salt + text; 
+            byte[] myBytes = text.getBytes("UTF-8");
+            int length = myBytes.length;
+            byte[] myHash = new byte[length];
+            StringBuilder myHexString = new StringBuilder(); 
+            for (int i = 0; i < myBytes.length; i++){
+                myHash[i] = (byte) ((myBytes[i] * (1 << i)) & 0xFF);
+                String hex = Integer.toHexString(0xff & myHash[i]);
+                if (hex.length() == 1) { 
+                    myHexString.append('0'); // Pad single-digit hex values
+                }
+                myHexString.append(hex);
+            }
+
+            return myHexString.toString();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
 
