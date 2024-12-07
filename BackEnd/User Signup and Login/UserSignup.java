@@ -35,14 +35,14 @@ public class UserSignup {
         String CVC = createCVC.getText();
         String expDate = createExp.getText();
 
-        UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email2 + ";" + password2 + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
+        UserSignup.appendToFile("account.txt", firstName + ";" + lastName + ";" + email2 + ";" + password2 + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
     }
 
     public static void appendToFile(String filename, String content) {
         Path path = Paths.get(filename);
 
         try {
-            if (ReadFile.Compare(content, "UserSignup.txt") != true) {
+            if (ReadFile.Compare(content, "account.txt") != true) {
                 content = content + "\n";
                 Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 System.out.println("Successfully wrote to the file.");
