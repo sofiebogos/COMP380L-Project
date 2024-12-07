@@ -1,47 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.WelcomeController">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="710.0" prefWidth="1280.0">
+<ScrollPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.WelcomeController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
          <children>
-            <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" layoutY="52.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0">
+               <fill>
+                  <RadialGradient centerX="0.19372695486483976" centerY="0.45899054831134783" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.772549033164978" green="0.929411768913269" blue="0.9882352948188782" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.21960784494876862" green="0.545098066329956" blue="0.7568627595901489" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle fx:id="topbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="81.0" layoutX="-1.0" layoutY="-9.0" stroke="#dbdbdb" strokeType="INSIDE" strokeWidth="1.5" width="1283.0" />
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="411.0" layoutX="546.0" layoutY="165.0" stroke="TRANSPARENT" strokeType="INSIDE" width="591.0" />
+            <Label layoutX="123.0" layoutY="21.0" prefHeight="29.0" prefWidth="135.0" text="JAMS AUTO SALES ">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="Search" layoutX="368.0" layoutY="21.0" text="Search">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="21.0" text="Cars for Sale">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="sellacar" layoutX="748.0" layoutY="22.0" text="Sell a Car">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="signout" layoutX="1150.0" layoutY="22.0" text="Sign Out">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="45.0" fitWidth="109.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../CarPics/McqueenBackground.gif" />
+                  <Image url="@resizedlogo.png" />
                </image>
             </ImageView>
-            <Label layoutX="452.0" layoutY="207.0" text="Login Successful!" textFill="WHITE">
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="1103.0" layoutY="20.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@signinicon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="180.0" layoutY="174.0" prefHeight="59.0" prefWidth="217.0" text="WELCOME TO">
                <font>
-                  <Font name="Arial" size="48.0" />
+                  <Font name="Agency FB Bold" size="48.0" />
                </font>
             </Label>
-            <Label layoutX="540.0" layoutY="313.0" text="Welcome" textFill="WHITE">
+            <Label fx:id="name" alignment="CENTER" layoutX="73.0" layoutY="485.0" prefHeight="54.0" prefWidth="431.0" text="Name">
                <font>
-                  <Font name="Arial" size="48.0" />
+                  <Font name="Agency FB Bold" size="55.0" />
                </font>
             </Label>
-            <Label fx:id="name" alignment="CENTER" layoutX="576.0" layoutY="398.0" text="Name" textFill="WHITE">
+            <Button fx:id="browseCars" layoutX="661.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchToAllListings" prefHeight="49.0" prefWidth="345.0" text="Browse Cars">
                <font>
-                  <Font name="Arial" size="48.0" />
-               </font>
-            </Label>
-            <Button fx:id="browseCars" layoutX="499.0" layoutY="570.0" mnemonicParsing="false" onAction="#switchToAllListings" prefHeight="34.0" prefWidth="112.0" text="Browse Cars">
-               <font>
-                  <Font size="14.0" />
+                  <Font name="Lucida Bright Demibold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="sellYourCar" layoutX="669.0" layoutY="570.0" mnemonicParsing="false" onAction="#switchToPostNewCar" prefHeight="34.0" prefWidth="112.0" text="Sell Your Car">
+            <Button fx:id="sellYourCar" layoutX="662.0" layoutY="421.0" mnemonicParsing="false" onAction="#switchToPostNewCar" prefHeight="50.0" prefWidth="344.0" text="Sell Your Car">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="Lucida Bright Demibold" size="20.0" />
                </font>
             </Button>
-         </children></AnchorPane>
-  </content>
+            <ImageView fitHeight="305.0" fitWidth="344.0" layoutX="108.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="594.0" layoutY="223.0" prefHeight="70.0" prefWidth="479.0" text="Get Started" underline="true">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
 </ScrollPane>

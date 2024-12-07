@@ -152,6 +152,8 @@ public class controller implements Initializable{
         root = FXMLLoader.load(getClass().getResource("successfulLogin.fxml"));
         stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        String css = this.getClass().getResource("successfulLogin.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }

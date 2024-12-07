@@ -1,0 +1,17 @@
+.scroll-pane{
+    -fx-background-color: #6fa6c2;
+}
+.scroll-pane .viewport{
+    -fx-background-color: #6fa6c2;
+}
+#rectangle{
+    -fx-effect: dropshadow(gaussian, #5b768c, 20, 0.5, 1,1);
+}
+#browseCars{
+    -fx-background-color: #5aa8cf;
+    -fx-text-fill:white;
+}
+#sellYourCar{
+    -fx-background-color: #5aa8cf;
+    -fx-text-fill:white;
+}
