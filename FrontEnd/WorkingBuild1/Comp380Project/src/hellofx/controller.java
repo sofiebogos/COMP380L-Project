@@ -57,7 +57,7 @@ public class controller implements Initializable{
         String lastName = createLast.getText();
         String email = createEmail.getText();
         String password = createPassword.getText();
-        String password2 = createPassword.getText(); // For password value to save use VeryBadHash in Login. MUST be saved in that form
+        String password2 = confirmPassword.getText(); // For password value to save use VeryBadHash in Login. MUST be saved in that form
         String DOBmonth = createMonth.getValue();
         Integer DOBday = createDay.getValue();
         Integer DOByear = createYear.getValue();
@@ -82,7 +82,7 @@ public class controller implements Initializable{
         matcherror.setText("");
        if(password.equals(password2) && empty==false){
             String passHash = Login.VeryBadHash(password2, salt);
-            UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + passHash + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
+            UserSignup.appendToFile("account.txt", firstName + ";" + lastName + ";" + email + ";" + passHash + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
             root = FXMLLoader.load(getClass().getResource("login.fxml"));
             stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
             scene = new Scene(root);

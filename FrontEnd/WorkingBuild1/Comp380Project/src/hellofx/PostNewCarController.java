@@ -76,6 +76,8 @@ public class PostNewCarController implements Initializable {
         root = FXMLLoader.load(getClass().getResource("successfulLogin.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        String css = this.getClass().getResource("successfulLogin.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
