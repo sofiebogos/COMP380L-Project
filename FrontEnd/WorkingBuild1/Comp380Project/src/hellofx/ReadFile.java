@@ -23,6 +23,7 @@ public class ReadFile {
      */
     public static void main(String[] args) {
         Read("listing.txt");
+        Read("account.txt");
     }
 
     /**
@@ -35,10 +36,10 @@ public class ReadFile {
         // if (filename == "car.txt") {
         //     ReadCar();
         // }
-        if (filename == "listing.txt") {
-            ReadListing();
+        if ("listing.txt".equals(filename)) {
+            
         }
-        if (filename == "account.txt") {
+        if ("account.txt".equals(filename)) {
             ReadAccount();
         }
 
@@ -78,7 +79,8 @@ public class ReadFile {
      */
 
     public static void ReadAccount() {
-        String filename = "account.txt";
+        String filename = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
+                  "TextFiles" + File.separator + "account.txt";
         try {
             File file = new File(filename);
             Scanner myReader = new Scanner(file);
@@ -89,7 +91,7 @@ public class ReadFile {
                     String[] parts = data.split(";");
                     accountList.add(
                             new Account(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7],
-                                    parts[8], parts[9], parts[10], parts[11], parts[12], parts[13]));
+                                    parts[8], parts[9], parts[10], parts[11], parts[12], parts[13], parts[14]));
                 }
             }
             myReader.close();
@@ -139,7 +141,9 @@ public class ReadFile {
 
     public static boolean Compare(String toCompare, String filename) {
         try {
-            File file = new File(filename);
+            String files = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
+                  "TextFiles" + File.separator + filename + ".txt";
+            File file = new File(files);
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -168,11 +172,12 @@ public class ReadFile {
     public static String FindAndReturn(String toCompare, String filename) { // ONLY CHECKS FOR A PARTIAL. IF HANDED BAD
                                                                             // DATA WILL RETURN BAD RESULTS
         try {
-            File file = new File(filename);
-            Scanner myReader = new Scanner(file);
+            String file = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
+                  "TextFiles" + File.separator + filename + ".txt";
+            Scanner myReader = new Scanner(new File(file));
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                if ((toCompare.toLowerCase().contains(data)) == true) {
+                if ((data.toLowerCase().contains(toCompare)) == true) {
                     myReader.close();
                     return toCompare;
                 }
