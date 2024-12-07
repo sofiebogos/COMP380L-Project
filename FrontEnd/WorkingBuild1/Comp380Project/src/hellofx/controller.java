@@ -80,8 +80,9 @@ public class controller implements Initializable{
             }
         }
         matcherror.setText("");
-        if(password.equals(password2) && empty==false){
-            UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + password + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
+       if(password.equals(password2) && empty==false){
+            String passHash = Login.VeryBadHash(password2, salt);
+            UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + passHash + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
             root = FXMLLoader.load(getClass().getResource("login.fxml"));
             stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
             scene = new Scene(root);
