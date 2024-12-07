@@ -1,9 +1,9 @@
 package hellofx;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.io.IOException;
 import java.nio.file.StandardOpenOption;
 
 public class WriteFile {
@@ -38,7 +38,7 @@ public class WriteFile {
         Path path = Paths.get(filename);
 
         try {
-            if (ReadFile.Compare(content, "listing.txt") != true) {
+            if (ReadFile.Compare(content, "listing") != true) {
                 content = content + "\n";
                 Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 System.out.println("Successfully wrote to the file.");

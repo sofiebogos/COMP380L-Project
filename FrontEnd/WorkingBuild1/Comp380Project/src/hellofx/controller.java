@@ -33,7 +33,9 @@ public class controller implements Initializable{
                       createZIP, createCardnum, createCVC, createExp;
     
     @FXML
-    private PasswordField paswordText;
+    private PasswordField createPassword, confirmPassword;
+    @FXML
+    private Label matcherror, emptyfield;
 
     @FXML
     private ComboBox<String> createMonth;
@@ -53,8 +55,9 @@ public class controller implements Initializable{
     public void switchToLogin(ActionEvent enter) throws IOException{
         String firstName = createFirst.getText();
         String lastName = createLast.getText();
-        String email2 = createEmail.getText();
-        String password2 = createPassword.getText();
+        String email = createEmail.getText();
+        String password = createPassword.getText();
+        String password2 = createPassword.getText(); // For password value to save use VeryBadHash in Login. MUST be saved in that form
         String DOBmonth = createMonth.getValue();
         Integer DOBday = createDay.getValue();
         Integer DOByear = createYear.getValue();
@@ -65,16 +68,36 @@ public class controller implements Initializable{
         String cardNumber = createCardnum.getText();
         String CVC = createCVC.getText(); 
         String expDate = createExp.getText();
-    
-        UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email2 + ";" + password2 + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";");
+        String salt = Account.generateHex();
 
-        root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("login.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
+        String[] textFields = {firstName, lastName, email, password, password2, DOBmonth,address, city, state, ZIP, cardNumber, CVC, expDate};
+        boolean empty = false;
+        for(int i=0; i<13; i++){
+            if(textFields[i].isEmpty() || DOBday == null || DOByear == null){
+                empty = true;
+                emptyfield.setText("Please fill out all required fields.");
+                break;
+            }
+        }
+        matcherror.setText("");
+       if(password.equals(password2) && empty==false){
+            String passHash = Login.VeryBadHash(password2, salt);
+            UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + passHash + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
+            root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            String css = this.getClass().getResource("login.css").toExternalForm();
+            scene.getStylesheets().add(css);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if(!password.equals(password2) && empty==false){
+            matcherror.setText("The passwords you entered do not match.");
+            emptyfield.setText("");
+        }
+        else if(!password.equals(password2) && empty == true)
+            matcherror.setText("The passwords you entered do not match.");
+
     }
 
     /**
@@ -86,6 +109,8 @@ public class controller implements Initializable{
         root = FXMLLoader.load(getClass().getResource("createaccount.fxml"));
         stage = (Stage)((Node)hyperlink.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        String css = this.getClass().getResource("createaccount.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
@@ -99,6 +124,8 @@ public class controller implements Initializable{
         root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)signin.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        String css = this.getClass().getResource("login.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
@@ -113,22 +140,22 @@ public class controller implements Initializable{
   * @param enter click enter button in Login page
   * @throws IOException
   */
-    public void Enter(ActionEvent enter) throws IOException {
-        String email = emailtext.getText();
-        String password = passwordtext.getText();
-        if (AccountManager.getAccount(email, password) == null){
-            System.out.println("Account email and password combination does not exist!");
-        }
-        else{
-            AccountManager.setCurrentAccount(AccountManager.getAccount(email, password));
-            //OtherMain.switchView("allListings.fxml");
-            root = FXMLLoader.load(getClass().getResource("successfulLogin.fxml"));
-            stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
+  public void Enter(ActionEvent enter) throws IOException {
+    String email = emailtext.getText();
+    String password = passwordtext.getText();
+    if (Login.auth(email, password) == false){
+        System.out.println("Account email and password combination does not exist!");
     }
+    else{
+        AccountManager.setCurrentAccount(AccountManager.getAccount(email));
+        //OtherMain.switchView("allListings.fxml");
+        root = FXMLLoader.load(getClass().getResource("successfulLogin.fxml"));
+        stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+}
     public void login(){
 
     }

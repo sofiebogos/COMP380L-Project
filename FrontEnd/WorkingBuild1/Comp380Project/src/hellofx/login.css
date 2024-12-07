@@ -1,42 +1,27 @@
 .scroll-pane{
-    -fx-background-color: #3950a0;
+    -fx-background-color: #2a7fb6;
 }
 .scroll-pane .viewport{
-    -fx-background-color:#3950a0;
+    -fx-background-color:#2a7fb6;
 }
 
-#jams{
-    -fx-effect: dropshadow(gaussian, #515f82, 5, 10, 4, 4);
-}
-
-#auto{
-    -fx-effect: dropshadow(gaussian, #515f82, 5, 10, 4, 4);
-}
-
-#sales{
-    -fx-effect: dropshadow(gaussian, #515f82, 5, 10, 4, 4);
-}
-
-#signin{
-    -fx-effect: dropshadow(gaussian, #515f82, 5, 10, 4, 4);
-}
 
 #rectangle{
     -fx-effect: dropshadow(gaussian, #515f82, 20, 0.5, 1,1);
 }
 
 #enter{
-    -fx-background-color: #7691ad;
+    -fx-background-color: #2a7fb6;
     -fx-text-fill:white;
 }
 #emailtext{
-    -fx-border-color: #7691ad;     
+    -fx-border-color: #2a7fb6;     
     -fx-border-width: 1.5;
     -fx-border-radius: 4; 
     -fx-background-radius: 4;
 }
 #passwordtext{
-    -fx-border-color: #7691ad;     
+    -fx-border-color: #2a7fb6;     
     -fx-border-width: 1.5;
     -fx-border-radius: 4; 
     -fx-background-radius: 4;

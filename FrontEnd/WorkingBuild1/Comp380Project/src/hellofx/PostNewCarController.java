@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -46,7 +47,9 @@ public class PostNewCarController implements Initializable {
     @FXML
     private ComboBox<String> make, color, condition, titleStatus;
     @FXML
-    private Button addPics, postListing, backButton;
+    private Button addPics, postListing;
+    @FXML
+    private Hyperlink backButton;
 
     private static boolean hasInitialized = true;
     private static Integer[] years;
@@ -91,6 +94,22 @@ public class PostNewCarController implements Initializable {
         desc = this.desc.getText();
         String[] carInfo = {year, make, model, color, mileage, condition, titleStatus, zip, price, desc};
         currentAccount.postNewListing(carInfo, pictures);
+    }
+    public void switchToSignin (ActionEvent signin) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        stage = (Stage)((Node)signin.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        String css = this.getClass().getResource("login.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToAllListings(ActionEvent e) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("allListings.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     
 

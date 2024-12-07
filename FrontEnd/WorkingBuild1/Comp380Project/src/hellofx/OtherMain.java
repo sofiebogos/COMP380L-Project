@@ -41,6 +41,7 @@ public class OtherMain extends Application {
         PostNewCarController.populateLists();
 		ListingManager.addDefaultPics();
 		ReadFile.addDefaultListings(AccountManager.getDefaultAccount());
+        ReadFile.ReadAccount();
 		Image icon = new Image("CarPics\\luigi.gif");
 		stage.getIcons().add(icon);
         Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
