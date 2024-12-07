@@ -5,7 +5,7 @@
     -fx-background-color: #2a7fb6;
 }
 #rectangle{
-    -fx-effect: dropshadow(gaussian, #515f82, 1000, 100, 100);
+    -fx-effect: dropshadow(gaussian, #587081, 20, 0.5, 1,1);
 }
 #enter{
     -fx-background-color: #4b9bce;
