@@ -79,8 +79,8 @@ public class ReadFile {
      */
 
     public static void ReadAccount() {
-        String filename = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
-                  "TextFiles" + File.separator + "account.txt";
+        String filename =  System.getProperty("user.dir") + File.separator + "FrontEnd" + File.separator + "WorkingBuild1" + File.separator + "Comp380Project" + File.separator + "src" + File.separator + 
+        "TextFiles" + File.separator + "account.txt";
         try {
             File file = new File(filename);
             Scanner myReader = new Scanner(file);
@@ -141,8 +141,8 @@ public class ReadFile {
 
     public static boolean Compare(String toCompare, String filename) {
         try {
-            String files = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
-                  "TextFiles" + File.separator + filename + ".txt";
+            String files =  System.getProperty("user.dir") + File.separator + "FrontEnd" + File.separator + "WorkingBuild1" + File.separator + "Comp380Project" + File.separator + "src" + File.separator + 
+            "TextFiles" + File.separator + filename + ".txt";
             File file = new File(files);
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
