@@ -143,6 +143,7 @@ public class controller implements Initializable{
   public void Enter(ActionEvent enter) throws IOException {
     String email = emailtext.getText();
     String password = passwordtext.getText();
+    ReadFile.ReadAccount();
     if (Login.auth(email, password) == false){
         System.out.println("Account email and password combination does not exist!");
     }

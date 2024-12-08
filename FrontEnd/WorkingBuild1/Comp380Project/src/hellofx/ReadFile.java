@@ -16,7 +16,7 @@ import javafx.scene.image.Image;
 public class ReadFile {
     //public static List<car> carList = new ArrayList<>();
     //public static ArrayList<Listing> listingList = new ArrayList<>();
-    public static ArrayList<Account> accountList = new ArrayList<>();
+    public static ArrayList<Account> allAccounts = new ArrayList<>();
 
     /**
      * @param args
@@ -89,7 +89,7 @@ public class ReadFile {
                 if (data != "") {
                     System.out.println(data);
                     String[] parts = data.split(";");
-                    accountList.add(
+                    allAccounts.add(
                             new Account(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7],
                                     parts[8], parts[9], parts[10], parts[11], parts[12], parts[13], parts[14]));
                 }
@@ -172,8 +172,8 @@ public class ReadFile {
     public static String FindAndReturn(String toCompare, String filename) { // ONLY CHECKS FOR A PARTIAL. IF HANDED BAD
                                                                             // DATA WILL RETURN BAD RESULTS
         try {
-            String file = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
-                  "TextFiles" + File.separator + filename + ".txt";
+            String file = System.getProperty("user.dir") + File.separator + "FrontEnd" + File.separator + "WorkingBuild1" + File.separator + "Comp380Project" + File.separator + "src" + File.separator + 
+            "TextFiles" + File.separator + filename + ".txt";
             Scanner myReader = new Scanner(new File(file));
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
