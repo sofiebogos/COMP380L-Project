@@ -47,17 +47,17 @@
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="21.0" text="Cars for Sale">
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="21.0" onAction="#switchToAllListings" text="Cars for Sale">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="sellacar" layoutX="748.0" layoutY="22.0" text="Sell a Car">
+            <Hyperlink fx:id="sellacar" layoutX="748.0" layoutY="22.0" onAction="#switchToPostNewCar" text="Sell a Car">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="signout" layoutX="1150.0" layoutY="22.0" text="Sign Out">
+            <Hyperlink fx:id="signout" layoutX="1150.0" layoutY="22.0" onAction="#switchToSignin" text="Sign Out">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
@@ -77,7 +77,7 @@
                   <Font name="Agency FB Bold" size="48.0" />
                </font>
             </Label>
-            <Label fx:id="name" alignment="CENTER" layoutX="73.0" layoutY="485.0" prefHeight="54.0" prefWidth="431.0" text="Name">
+            <Label fx:id="name" alignment="CENTER" layoutX="64.0" layoutY="485.0" prefHeight="54.0" prefWidth="431.0" text="Name">
                <font>
                   <Font name="Agency FB Bold" size="55.0" />
                </font>
