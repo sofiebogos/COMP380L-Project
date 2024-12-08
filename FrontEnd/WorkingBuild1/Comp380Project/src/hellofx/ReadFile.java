@@ -79,7 +79,7 @@ public class ReadFile {
      */
 
     public static void ReadAccount() {
-        String filename =  System.getProperty("user.dir") + File.separator + "FrontEnd" + File.separator + "WorkingBuild1" + File.separator + "Comp380Project" + File.separator + "src" + File.separator + 
+        String filename =  System.getProperty("user.dir") + File.separator + "src" + File.separator + 
         "TextFiles" + File.separator + "account.txt";
         try {
             File file = new File(filename);
@@ -141,7 +141,7 @@ public class ReadFile {
 
     public static boolean Compare(String toCompare, String filename) {
         try {
-            String files =  System.getProperty("user.dir") + File.separator + "FrontEnd" + File.separator + "WorkingBuild1" + File.separator + "Comp380Project" + File.separator + "src" + File.separator + 
+           String file = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
             "TextFiles" + File.separator + filename + ".txt";
             File file = new File(files);
             Scanner myReader = new Scanner(file);
@@ -172,7 +172,7 @@ public class ReadFile {
     public static String FindAndReturn(String toCompare, String filename) { // ONLY CHECKS FOR A PARTIAL. IF HANDED BAD
                                                                             // DATA WILL RETURN BAD RESULTS
         try {
-            String file = System.getProperty("user.dir") + File.separator + "FrontEnd" + File.separator + "WorkingBuild1" + File.separator + "Comp380Project" + File.separator + "src" + File.separator + 
+            String file = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
             "TextFiles" + File.separator + filename + ".txt";
             Scanner myReader = new Scanner(new File(file));
             while (myReader.hasNextLine()) {
