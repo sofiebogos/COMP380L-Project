@@ -51,7 +51,6 @@ public class WelcomeController implements Initializable{
 
     public void initialize(URL location, ResourceBundle resources){
         name.setText(AccountManager.currentAccount.getFirstName() + " " +  AccountManager.currentAccount.getLastName() + "!");
-        name.setLayoutX((1280.0 - name.getWidth()) / 2);
     }
 
     public void gotToSearch(ActionEvent hyperlink)throws IOException{
@@ -77,6 +76,8 @@ public class WelcomeController implements Initializable{
         root = FXMLLoader.load(getClass().getResource("home.fxml"));
         stage = (Stage)((Node)hyperlink.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        String css = this.getClass().getResource("home.css").toExternalForm();
+        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
