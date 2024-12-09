@@ -38,16 +38,17 @@ public class ListingController implements Initializable{
     private TextField searchInfo;
     
     @FXML
-    private ImageView carPic;
+    private ImageView carPic, profile;
 
     @FXML
     private Button nextCar, previousCar, search;
 
     @FXML
-    private Hyperlink backButton;
+    private Hyperlink backButton, email;
 
     @FXML
-    private Label condition, titleStatus, yearMakeModel, mileage, zip, price, desc;
+    private Label condition, titleStatus, yearMakeModel, 
+                  mileage, zip, price, desc, name;
 
 
     int i=0;
@@ -59,7 +60,8 @@ public class ListingController implements Initializable{
 
     public void openListing(){
         DecimalFormat priceFormat = new DecimalFormat("#,###");
-        String[] listingInfo = ListingManager.getListing(id).getVars();
+        Listing listing = ListingManager.getListing(id);
+        String[] listingInfo = listing.getVars();
         String formattedMileage = priceFormat.format(Integer.parseInt(listingInfo[5]));
         String formattedPrice = priceFormat.format(Integer.parseInt(listingInfo[7]));
         carPic.setImage(ListingManager.getListing(id).getPictures().get(0));
@@ -70,6 +72,14 @@ public class ListingController implements Initializable{
         zip.setText(listingInfo[6]);
         price.setText("$" + formattedPrice);
         desc.setText(listingInfo[8]);
+        Account owner = listing.getAccount();
+        name.setText(owner.getFirstName() + " " + owner.getLastName());
+        email.setText(owner.getEmail());
+
+        if (owner.getFirstName().equalsIgnoreCase("Homer")){
+            profile.setImage(new Image("CarPics\\homer.jpg"));
+        }
+
         this.id = id;
     }
 
@@ -117,29 +127,10 @@ public class ListingController implements Initializable{
         stage.show();
     }
 
-    public void switchToPostNewCar(ActionEvent e) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("PostNewCar.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("postcar.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToSignin (ActionEvent signin ) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        stage = (Stage)((Node)signin.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("login.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
-    }
-
 @Override
 public void initialize(URL location, ResourceBundle resources) {
     openListing();
+
 }
 
 }

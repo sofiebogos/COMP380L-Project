@@ -87,7 +87,7 @@ public class ReadFile {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 if (data != "") {
-                    System.out.println(data);
+                    //System.out.println(data);
                     String[] parts = data.split(";");
                     accountList.add(
                             new Account(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7],

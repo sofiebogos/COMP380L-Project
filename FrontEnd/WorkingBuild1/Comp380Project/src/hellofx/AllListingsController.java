@@ -8,6 +8,7 @@ import java.lang.classfile.instruction.ThrowInstruction;
 import java.net.URL;
 
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -37,7 +38,7 @@ public class AllListingsController implements Initializable{
     private Parent root;
 
     @FXML
-    private Button testAdd, browseCars;
+    private Button testAdd, browseCars, searchButton;
     @FXML
     private VBox initialVBox;
     @FXML
@@ -46,6 +47,9 @@ public class AllListingsController implements Initializable{
     private AnchorPane initialAnchorPane;
     @FXML
     private Label name, logo;
+    @FXML
+    private TextArea searchtext;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
@@ -128,6 +132,20 @@ public class AllListingsController implements Initializable{
         returnAP.setStyle("-fx-border-color: gray; -fx-border-width: 2; -fx-border-style: solid;");
 
         return returnAP;
+    }
+
+    public void search(ActionEvent e) throws IOException{
+        ArrayList<Listing> searchResults = ListingManager.searchCars(searchtext.getText());
+        root = FXMLLoader.load(getClass().getResource("listing.fxml"));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+        for (Listing listing : searchResults){
+            int id = listing.getID();
+            addListing(id);
+        }
     }
 
     public void openListing(ActionEvent e) throws IOException{

@@ -76,6 +76,24 @@ public class ListingManager {
         }
     }
 
+    public static ArrayList<Listing> searchCars(String userSearch){
+        ArrayList<Listing> returnList = new ArrayList<>();
+
+        for (Listing listing: listings){
+            if (listing.getMake().equalsIgnoreCase(userSearch)){
+                returnList.add(listing);
+            }
+            else if (listing.getModel().equalsIgnoreCase(userSearch)){
+                returnList.add(listing);
+            }
+            else if (listing.getYear().equalsIgnoreCase(userSearch)){
+                returnList.add(listing);
+            }
+            else{}
+        }
+        return returnList;
+    }
+
     public static ArrayList<Image> getDefaultpics(int i){
         return defaultCarPics.get(i);
     }

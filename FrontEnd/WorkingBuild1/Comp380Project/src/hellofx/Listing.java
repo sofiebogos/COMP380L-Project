@@ -80,4 +80,10 @@ public class Listing { // While some variables are ints, ONLY pass strings
         WriteFile.appendToFile("listing.txt", superString);
     }
 
+    public String getMake(){return make;}
+
+    public String getModel(){return model;}
+
+    public String getYear(){return year;}
+
 }

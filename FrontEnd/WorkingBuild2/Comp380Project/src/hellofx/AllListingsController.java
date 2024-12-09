@@ -8,6 +8,8 @@ import java.lang.classfile.instruction.ThrowInstruction;
 import java.net.URL;
 
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -24,6 +26,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.Initializable;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.jar.Attributes;
 import javafx.event.ActionEvent;
@@ -48,18 +51,15 @@ public class AllListingsController implements Initializable{
     private AnchorPane initialAnchorPane;
     @FXML
     private Label name, logo;
+    @FXML
+    private TextField searchtext;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        if (searched){
-            
-        }
 
-        else{
-            for (Listing listing : ListingManager.getAllListings()){
-            int id = listing.getID();
-            addListing(id);
-        }
+        for (Listing listing : ListingManager.getAllListings()){
+        int id = listing.getID();
+        addListing(id);
     }
         //name.setText(AccountManager.currentAccount.getFirstname());
     }
@@ -97,8 +97,6 @@ public class AllListingsController implements Initializable{
         root = FXMLLoader.load(getClass().getResource("successfulLogin.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("successfulLogin.css").toExternalForm();
-        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
@@ -134,7 +132,7 @@ public class AllListingsController implements Initializable{
         AnchorPane returnAP = new AnchorPane(returnIV, returnLabelOne, returnLabelTwo, returnButton);
 
         returnAP.setPrefHeight(200.0);
-        returnAP.setPrefWidth(300.0);
+        returnAP.setMinWidth(850.0);
         returnAP.setStyle("-fx-border-color: gray; -fx-border-width: 2; -fx-border-style: solid;");
 
         return returnAP;
@@ -147,29 +145,21 @@ public class AllListingsController implements Initializable{
         root = FXMLLoader.load(getClass().getResource("listing.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("listing.css").toExternalForm();
-        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void switchToSignin (ActionEvent signin ) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        stage = (Stage)((Node)signin.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("login.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToPostNewCar(ActionEvent e) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("PostNewCar.fxml"));
+        public void search(ActionEvent e) throws IOException{
+        ArrayList<Listing> searchResults = ListingManager.searchCars(searchtext.getText());
+        root = FXMLLoader.load(getClass().getResource("listing.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("postcar.css").toExternalForm();
-        scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
+
+        for (Listing listing : searchResults){
+            int id = listing.getID();
+            addListing(id);
+        }
     }
 }

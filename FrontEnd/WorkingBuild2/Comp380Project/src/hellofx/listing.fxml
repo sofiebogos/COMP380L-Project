@@ -27,17 +27,17 @@
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="17.0" onAction="#goBack" text="Cars for Sale">
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="17.0" text="Cars for Sale">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="sellacar" layoutX="750.0" layoutY="18.0" onAction="#switchToPostNewCar" text="Sell a Car">
+            <Hyperlink fx:id="sellacar" layoutX="750.0" layoutY="18.0" text="Sell a Car">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="signin" layoutX="1154.0" layoutY="18.0" onAction="#switchToSignin" text="Sign Out">
+            <Hyperlink fx:id="signin" layoutX="1154.0" layoutY="18.0" text="Sign Out">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
@@ -52,8 +52,8 @@
                   <Image url="@signinicon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="carPic" fitHeight="396.0" fitWidth="594.0" layoutX="163.0" layoutY="180.0" pickOnBounds="true" />
-            <Button fx:id="previousCar" layoutX="129.0" layoutY="348.0" mnemonicParsing="false" onAction="#previousImage" prefHeight="59.0" prefWidth="33.0" text="&lt;">
+            <ImageView fx:id="carPic" fitHeight="409.0" fitWidth="619.0" layoutX="140.0" layoutY="185.0" pickOnBounds="true" />
+            <Button fx:id="previousCar" layoutX="108.0" layoutY="348.0" mnemonicParsing="false" onAction="#previousImage" prefHeight="59.0" prefWidth="33.0" text="&lt;">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -66,22 +66,22 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Label fx:id="yearMakeModel" layoutX="163.0" layoutY="604.0" prefHeight="41.0" prefWidth="617.0" text="Year Make Model" underline="true">
+            <Label fx:id="yearMakeModel" layoutX="140.0" layoutY="603.0" prefHeight="41.0" prefWidth="617.0" text="Year Make Model" underline="true">
                <font>
                   <Font name="Lucida Bright" size="28.0" />
                </font>
             </Label>
-            <Label fx:id="price" layoutX="163.0" layoutY="655.0" prefHeight="41.0" prefWidth="617.0" text="Price">
+            <Label fx:id="price" layoutX="140.0" layoutY="653.0" prefHeight="41.0" prefWidth="617.0" text="Price">
                <font>
                   <Font name="Lucida Bright Demibold" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="desc" alignment="TOP_LEFT" layoutX="163.0" layoutY="721.0" prefHeight="171.0" prefWidth="617.0" text="Description" wrapText="true">
+            <Label fx:id="desc" alignment="TOP_LEFT" layoutX="140.0" layoutY="714.0" prefHeight="171.0" prefWidth="617.0" text="Description" wrapText="true">
                <font>
                   <Font name="Lucida Bright" size="17.0" />
                </font>
             </Label>
-            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#e4e5e6" height="338.0" layoutX="842.0" layoutY="209.0" stroke="TRANSPARENT" strokeType="INSIDE" width="293.0" />
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#e4e5e6" height="338.0" layoutX="848.0" layoutY="209.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
             <Label alignment="TOP_LEFT" layoutX="868.0" layoutY="269.0" prefHeight="17.0" prefWidth="105.0" text="Title Status:" wrapText="true">
                <font>
                   <Font name="Lucida Bright" size="18.0" />
@@ -102,12 +102,12 @@
                   <Font name="Lucida Bright" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="titleStatus" alignment="TOP_LEFT" layoutX="977.0" layoutY="271.0" prefHeight="20.0" prefWidth="151.0" text="title status" wrapText="true">
+            <Label fx:id="titleStatus" alignment="TOP_LEFT" layoutX="985.0" layoutY="271.0" prefHeight="11.0" prefWidth="128.0" text="title status" wrapText="true">
                <font>
                   <Font name="Lucida Bright" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="condition" alignment="TOP_LEFT" layoutX="965.0" layoutY="335.0" prefHeight="20.0" prefWidth="184.0" text="condition" wrapText="true">
+            <Label fx:id="condition" alignment="TOP_LEFT" layoutX="973.0" layoutY="335.0" prefHeight="11.0" prefWidth="128.0" text="condition" wrapText="true">
                <font>
                   <Font name="Lucida Bright" size="16.0" />
                </font>
@@ -117,7 +117,7 @@
                   <Font name="Lucida Bright" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="zip" alignment="TOP_LEFT" layoutX="961.0" layoutY="459.0" prefHeight="20.0" prefWidth="127.0" text="zip code" wrapText="true">
+            <Label fx:id="zip" alignment="TOP_LEFT" layoutX="961.0" layoutY="461.0" prefHeight="11.0" prefWidth="128.0" text="zip code" wrapText="true">
                <font>
                   <Font name="Lucida Bright" size="16.0" />
                </font>
@@ -125,6 +125,21 @@
             <Hyperlink fx:id="backButton" layoutX="76.0" layoutY="136.0" onAction="#goBack" text="Go Back">
                <font>
                   <Font name="Lucida Bright" size="14.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fx:id="profile" fitHeight="31.0" fitWidth="33.0" layoutX="868.0" layoutY="608.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@signinicon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="name" layoutX="907.0" layoutY="610.0" prefHeight="28.0" prefWidth="170.0" text="Name">
+               <font>
+                  <Font name="Lucida Bright" size="18.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="email" layoutX="907.0" layoutY="639.0" prefHeight="30.0" prefWidth="230.0" text="Email">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
                </font>
             </Hyperlink>
          </children>

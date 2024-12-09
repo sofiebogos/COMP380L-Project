@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -46,6 +47,8 @@ public class controller implements Initializable{
     private ComboBox<Integer> createYear;
     @FXML
     private Button login;
+    @FXML
+    private Hyperlink search;
     
     /**
      * Receives create account information and switches the scene to Login page.
@@ -111,6 +114,14 @@ public class controller implements Initializable{
         scene = new Scene(root);
         String css = this.getClass().getResource("createaccount.css").toExternalForm();
         scene.getStylesheets().add(css);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void gotToSearch(ActionEvent hyperlink)throws IOException{
+        root = FXMLLoader.load(getClass().getResource("search.fxml"));
+        stage = (Stage)((Node)hyperlink.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
