@@ -48,6 +48,6 @@ public class WelcomeController implements Initializable{
 
     public void initialize(URL location, ResourceBundle resources){
         name.setText(AccountManager.currentAccount.getFirstName() + " " +  AccountManager.currentAccount.getLastName() + "!");
-        name.setLayoutX((1280.0 - name.getWidth()) / 2);
+       
     }
 }
