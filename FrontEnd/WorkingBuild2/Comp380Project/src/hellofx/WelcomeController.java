@@ -46,6 +46,16 @@ public class WelcomeController implements Initializable{
         stage.show();
     }
 
+    public void switchToSignin (ActionEvent signin ) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        stage = (Stage)((Node)signin.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        String css = this.getClass().getResource("login.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void initialize(URL location, ResourceBundle resources){
         name.setText(AccountManager.currentAccount.getFirstName() + " " +  AccountManager.currentAccount.getLastName() + "!");
        

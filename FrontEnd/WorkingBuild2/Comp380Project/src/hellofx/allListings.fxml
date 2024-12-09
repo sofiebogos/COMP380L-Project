@@ -13,7 +13,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.AllListingsController">
    <children>
       <SplitPane dividerPositions="0.09" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0">
@@ -41,7 +40,7 @@
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="sellacar" layoutX="840.0" layoutY="16.0" text="Sell a Car">
+                  <Hyperlink fx:id="sellacar" layoutX="840.0" layoutY="16.0" onAction="#switchToPostNewCar" text="Sell a Car">
                      <font>
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>
@@ -51,7 +50,7 @@
                         <Image url="@signinicon.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="signin" layoutX="1160.0" layoutY="17.0" text="Sign Out">
+                  <Hyperlink fx:id="signin" layoutX="1160.0" layoutY="17.0" onAction="#switchToSignin" text="Sign Out">
                      <font>
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>
