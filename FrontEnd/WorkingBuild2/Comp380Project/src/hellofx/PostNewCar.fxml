@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.PostNewCarController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1280.0">
+         <children>
+            <Rectangle fx:id="topbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="-1.0" layoutY="-9.0" stroke="#dbdbdb" strokeType="INSIDE" strokeWidth="1.5" width="1283.0" />
+            <Label layoutX="123.0" layoutY="17.0" prefHeight="29.0" prefWidth="135.0" text="JAMS AUTO SALES ">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="109.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resizedlogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="1106.0" layoutY="16.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@signinicon.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="788.0" layoutX="237.0" layoutY="138.0" stroke="TRANSPARENT" strokeType="INSIDE" width="849.0" />
+            <Label fx:id="sellyourcar" layoutX="543.0" layoutY="192.0" text="Sell Your Car">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="381.0" layoutY="286.0" text="Year">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="year" layoutX="381.0" layoutY="306.0" prefHeight="30.0" prefWidth="140.0" />
+            <Line endX="118.66668701171875" layoutX="661.0" layoutY="236.0" startX="-122.33331298828125" />
+            <Label layoutX="570.0" layoutY="286.0" text="Make">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="make" layoutX="568.0" layoutY="307.0" prefHeight="30.0" prefWidth="140.0" />
+            <Label layoutX="756.0" layoutY="286.0" text="Model">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="380.0" layoutY="380.0" text="Price">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="model" layoutX="758.0" layoutY="307.0" prefHeight="30.0" prefWidth="140.0" />
+            <TextField fx:id="price" layoutX="380.0" layoutY="401.0" prefHeight="30.0" prefWidth="140.0" />
+            <Label layoutX="569.0" layoutY="478.0" text="Color">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mileage" layoutX="581.0" layoutY="401.0" prefHeight="30.0" prefWidth="140.0" />
+            <TextField fx:id="zip" layoutX="758.0" layoutY="401.0" prefHeight="30.0" prefWidth="140.0" />
+            <ComboBox fx:id="titleStatus" layoutX="380.0" layoutY="497.0" prefHeight="30.0" prefWidth="140.0" />
+            <ComboBox fx:id="color" layoutX="570.0" layoutY="497.0" prefHeight="30.0" prefWidth="140.0" />
+            <Label layoutX="582.0" layoutY="380.0" text="Mileage">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="764.0" layoutY="478.0" text="Condition">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="condition" layoutX="761.0" layoutY="497.0" prefHeight="30.0" prefWidth="140.0" />
+            <Label layoutX="375.0" layoutY="478.0" text="Title Status">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="758.0" layoutY="380.0" text="Zip Code">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="374.0" layoutY="578.0" text="Description">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="desc" layoutX="372.0" layoutY="598.0" prefHeight="102.0" prefWidth="531.0" />
+            <Label layoutX="374.0" layoutY="737.0" text="Photos">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="addPics" layoutX="374.0" layoutY="757.0" mnemonicParsing="false" onAction="#addCarPics" prefHeight="29.0" prefWidth="114.0" text="Add">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="postListing" layoutX="552.0" layoutY="838.0" mnemonicParsing="false" onAction="#postCar" prefHeight="37.0" prefWidth="213.0" text="Post Car">
+               <font>
+                  <Font name="Lucida Bright" size="16.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="backButton" layoutX="262.0" layoutY="155.0" onAction="#goBack" prefHeight="25.0" prefWidth="67.0" text="Go back">
+               <font>
+                  <Font name="Lucida Bright" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="Search" layoutX="367.0" layoutY="18.0" text="Search">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="17.0" onAction="#switchToAllListings" text="Cars for Sale">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="sellacar" layoutX="750.0" layoutY="18.0" text="Sell a Car">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="signin" layoutX="1154.0" layoutY="18.0" onAction="#switchToSignin" text="Sign Out">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Label fx:id="uploadStatus" layoutX="518.0" layoutY="764.0">
+               <font>
+                  <Font name="Lucida Bright" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

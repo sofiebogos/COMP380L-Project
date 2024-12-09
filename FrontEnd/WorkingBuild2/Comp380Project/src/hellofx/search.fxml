@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.ListingController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1280.0">
+         <children>
+            <Rectangle fx:id="topbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="-1.0" layoutY="-9.0" stroke="#dbdbdb" strokeType="INSIDE" strokeWidth="1.5" width="1283.0" />
+            <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="792.0" layoutX="60.0" layoutY="122.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1140.0" />
+            <Label layoutX="123.0" layoutY="17.0" prefHeight="29.0" prefWidth="135.0" text="JAMS AUTO SALES ">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="Search" layoutX="367.0" layoutY="18.0" text="Search">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="17.0" text="Cars for Sale">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="sellacar" layoutX="750.0" layoutY="18.0" text="Sell a Car">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="signin" layoutX="1154.0" layoutY="18.0" text="Sign Out">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="45.0" fitWidth="109.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resizedlogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="1106.0" layoutY="16.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@signinicon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="yearMakeModel" layoutX="440.0" layoutY="355.0" prefHeight="42.0" prefWidth="298.0" text="Find Your Next Ride!">
+               <font>
+                  <Font name="Lucida Bright" size="28.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="backButton" layoutX="76.0" layoutY="136.0" onAction="#goBack" text="Go Back">
+               <font>
+                  <Font name="Lucida Bright" size="14.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="searchInfo" layoutX="321.0" layoutY="464.0" prefHeight="36.0" prefWidth="536.0" promptText="Year, Make, Model, etc">
+               <font>
+                  <Font name="Lucida Bright" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="serach" layoutX="557.0" layoutY="518.0" mnemonicParsing="false" text="Search">
+               <font>
+                  <Font name="Lucida Bright" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

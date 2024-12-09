@@ -1,0 +1,94 @@
+.scroll-pane{
+    -fx-background-color: #2a7fb6;
+}
+.scroll-pane .viewport{
+    -fx-background-color: #2a7fb6;
+}
+#rectangle{
+    -fx-effect: dropshadow(gaussian, #587081, 20, 0.5, 1,1);
+}
+#enter{
+    -fx-background-color: #4b9bce;
+    -fx-text-fill:white;
+}
+#createFirst{
+    -fx-border-color: #2a7fb6;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createLast{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createEmail{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createPassword{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#confirmPassword{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createAddress{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createCity{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createState{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createZIP{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createCardnum{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createCVC{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createExp{
+    -fx-border-color: #4b9bce;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#createMonth{
+    -fx-background-color: #4b9bce;
+}
+#createDay{
+    -fx-background-color: #4b9bce;
+}
+#createYear{
+-fx-background-color: #4b9bce;
+}

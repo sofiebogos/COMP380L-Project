@@ -1,0 +1,13 @@
+.scroll-pane{
+    -fx-background-color: white;
+}
+.scroll-pane .viewport{
+    -fx-background-color: white;
+}
+
+#login{
+    -fx-background-color: #5ca1cb;
+    -fx-text-fill:white;
+    -fx-effect: dropshadow(gaussian, #d5d6da, 10, 0.5, 1,1);
+}
+

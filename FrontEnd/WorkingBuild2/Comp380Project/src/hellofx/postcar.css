@@ -1,0 +1,71 @@
+.scroll-pane{
+    -fx-background-color: #6fa6c2;
+}
+.scroll-pane .viewport{
+    -fx-background-color: #6fa6c2;
+}
+#postListing{
+    -fx-background-color: #dbddde;
+  -fx-text-fill:black;
+}
+#addPics{
+    -fx-background-color: #dbddde;
+  -fx-text-fill:black;
+}
+#year{
+    -fx-background-color: #dbddde;     
+  
+}
+#make{
+    -fx-background-color: #dbddde;     
+   
+}
+#model{
+    -fx-border-color: #6aa7be;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+
+#price{
+    -fx-border-color: #6aa7be;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#mileage{
+    -fx-border-color: #6aa7be;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#zip{
+    -fx-border-color: #6aa7be;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+#price{
+    -fx-border-color: #6aa7be;     
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4; 
+    -fx-background-radius: 4;
+}
+
+#titleStatus{
+    -fx-background-color: #dbddde;     
+}
+#color{
+    -fx-background-color: #dbddde;     
+  
+}
+#condition{
+    -fx-background-color: #dbddde;     
+  
+}
+#rectangle{
+    -fx-effect: dropshadow(gaussian, #455e6f, 20, 0.5, 1,1);
+}
+
+
+

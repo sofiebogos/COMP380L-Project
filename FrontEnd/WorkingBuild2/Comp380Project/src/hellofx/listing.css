@@ -1,0 +1,15 @@
+.scroll-pane{
+    -fx-background-color: #e4e5e6;
+}
+.scroll-pane .viewport{
+    -fx-background-color: #e4e5e6;
+}
+#rectangle1{
+    -fx-effect: dropshadow(gaussian, #b8bbbc, 20, 0.5, 1,1);
+}
+#previousCar{
+    -fx-background-color: #e4e5e6;
+}
+#nextCar{
+    -fx-background-color: #e4e5e6;
+}

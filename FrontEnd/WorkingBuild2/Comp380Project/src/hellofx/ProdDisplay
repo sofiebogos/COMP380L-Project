@@ -1,0 +1,55 @@
+// import javafx.application.Application;
+// import javafx.geometry.Insets;
+// import javafx.scene.Scene;
+// import javafx.scene.control.Label;
+// import javafx.scene.image.Image;
+// import javafx.scene.image.ImageView;
+// import javafx.scene.layout.VBox;
+// import javafx.stage.Stage;
+// import java.io.File;
+
+// public class Main extends Application {
+
+//     @Override
+//     public void start(Stage primaryStage) {
+//         // Load the car image using a valid file URI in Java
+//         File imageFile = new File("C:\\Users\\funnj\\Downloads\\car.jpg"); // Change directory
+
+//                 // Check if the file exists before using it
+//                 if (!imageFile.exists()) {
+//                     System.out.println("Image file not found.");
+//                     return;
+//                 }
+
+//         Image carImage = new Image(imageFile.toURI().toString());
+//         ImageView carImageView = new ImageView(carImage);
+        
+//         // Size of the image
+//         carImageView.setFitWidth(400);
+//         carImageView.setPreserveRatio(true);
+        
+//         // Label to display the description of the car
+//         Label descriptionLabel = new Label("This luxurious Mercedes-Benz offers a blend of elegance and performance, "
+//                                            + "perfect for scenic drives and everyday comfort.");
+//         descriptionLabel.setWrapText(true); // Allow the description to wrap
+
+//         // Label for the price of the car
+//         Label priceLabel = new Label("Price: $80,000");
+//         priceLabel.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+
+//         // VBox to arrange the image, description, and price vertically
+//         VBox vbox = new VBox(10); // Spacing between the elements
+//         vbox.setPadding(new Insets(15)); // Padding around the VBox
+//         vbox.getChildren().addAll(carImageView, descriptionLabel, priceLabel); // Add the image, description, and price to the layout
+
+//         // Set up the scene and stage
+//         Scene scene = new Scene(vbox, 500, 500); // Adjust size based on your layout preferences
+//         primaryStage.setTitle("Car Product Display");
+//         primaryStage.setScene(scene);
+//         primaryStage.show();
+//     }
+
+//     public static void main(String[] args) {
+//         launch(args);
+//     }
+// }
