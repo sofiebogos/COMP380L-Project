@@ -1,5 +1,6 @@
 package hellofx;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -42,10 +43,12 @@ public class UserSignup {
     }
 
     public static void appendToFile(String filename, String content) {
-        Path path = Paths.get(filename);
+        String fullpath = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
+                  "TextFiles" + File.separator + filename + ".txt";
+        Path path = Paths.get(fullpath);
 
         try {
-            if (ReadFile.Compare(content, "UserSignup.txt") != true) {
+            if (ReadFile.Compare(content, "account") != true) {
                 content = content + "\n";
                 Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 System.out.println("Successfully wrote to the file.");

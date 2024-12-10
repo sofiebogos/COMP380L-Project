@@ -28,7 +28,7 @@
                         <Font name="Agency FB Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Hyperlink fx:id="search" layoutX="365.0" layoutY="16.0" text="Search">
+                  <Hyperlink fx:id="search" layoutX="365.0" layoutY="16.0" onAction="#search" text="Search">
                      <font>
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>
@@ -38,7 +38,7 @@
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="sellacar" layoutX="840.0" layoutY="16.0" text="Sell a Car">
+                  <Hyperlink fx:id="sellacar" layoutX="840.0" layoutY="16.0" onAction="#switchToPostNewCar" text="Sell a Car">
                      <font>
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>
@@ -48,7 +48,7 @@
                         <Image url="@signinicon.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="signin" layoutX="1160.0" layoutY="17.0" text="Sign Out">
+                  <Hyperlink fx:id="signin" layoutX="1160.0" layoutY="17.0" onAction="#switchToSignin" text="Sign Out">
                      <font>
                         <Font name="Lucida Bright Demibold" size="16.0" />
                      </font>

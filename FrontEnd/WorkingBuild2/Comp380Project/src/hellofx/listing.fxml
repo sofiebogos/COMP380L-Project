@@ -22,22 +22,22 @@
                   <Font name="Agency FB Bold" size="20.0" />
                </font>
             </Label>
-            <Hyperlink fx:id="Search" layoutX="367.0" layoutY="18.0" text="Search">
+            <Hyperlink fx:id="Search" layoutX="367.0" layoutY="18.0" onAction="#gotToSearch" text="Search">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="17.0" text="Cars for Sale">
+            <Hyperlink fx:id="carsforsale" layoutX="534.0" layoutY="17.0" onAction="#goBack" text="Cars for Sale">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="sellacar" layoutX="750.0" layoutY="18.0" text="Sell a Car">
+            <Hyperlink fx:id="sellacar" layoutX="750.0" layoutY="18.0" onAction="#switchToPostNewCar" text="Sell a Car">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>
             </Hyperlink>
-            <Hyperlink fx:id="signin" layoutX="1154.0" layoutY="18.0" text="Sign Out">
+            <Hyperlink fx:id="signin" layoutX="1154.0" layoutY="18.0" onAction="#switchToSignin" text="Sign Out">
                <font>
                   <Font name="Lucida Bright Demibold" size="16.0" />
                </font>

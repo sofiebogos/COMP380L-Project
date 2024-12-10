@@ -80,25 +80,25 @@ public class controller implements Initializable{
             }
         }
         matcherror.setText("");
-    //    if(password.equals(password2) && empty==false){
-    //         String passHash = Login.VeryBadHash(password2, salt);
-    //         UserSignup.appendToFile("UserSignup.txt", firstName + ";" + lastName + ";" + email + ";" + passHash + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
-    //         root = FXMLLoader.load(getClass().getResource("login.fxml"));
-    //         stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
-    //         scene = new Scene(root);
-    //         String css = this.getClass().getResource("login.css").toExternalForm();
-    //         scene.getStylesheets().add(css);
-    //         stage.setScene(scene);
-    //         stage.show();
-    //     }
-    //     else if(!password.equals(password2) && empty==false){
-    //         matcherror.setText("The passwords you entered do not match.");
-    //         emptyfield.setText("");
-    //     }
-    //     else if(!password.equals(password2) && empty == true)
-    //         matcherror.setText("The passwords you entered do not match.");
-
         if(password.equals(password2) && empty==false){
+             String passHash = Login.VeryBadHash(password2, salt);
+             UserSignup.appendToFile("account", firstName + ";" + lastName + ";" + email + ";" + passHash + ";" + DOBmonth + ";" + DOBday + ";" + DOByear + ";" + address + ";" + city + ";" + state + ";" + ZIP + ";" + cardNumber + ";" + CVC + ";" + expDate + ";" + salt);
+             root = FXMLLoader.load(getClass().getResource("login.fxml"));
+             stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
+             scene = new Scene(root);
+             String css = this.getClass().getResource("login.css").toExternalForm();
+             scene.getStylesheets().add(css);
+             stage.setScene(scene);
+             stage.show();
+         }
+         else if(!password.equals(password2) && empty==false){
+             matcherror.setText("The passwords you entered do not match.");
+             emptyfield.setText("");
+       }
+         else if(!password.equals(password2) && empty == true)
+             matcherror.setText("The passwords you entered do not match.");
+
+        /*if(password.equals(password2) && empty==false){
             new Account(firstName, lastName, email, password, DOBmonth, DOBday.toString(), 
                         DOByear.toString(), address, city, state, ZIP, cardNumber, CVC, expDate, "1000"); //salt is not doing anything for now
             root = FXMLLoader.load(getClass().getResource("login.fxml"));
@@ -115,7 +115,7 @@ public class controller implements Initializable{
         }
         else if(!password.equals(password2) && empty == true)
             matcherror.setText("The passwords you entered do not match.");
-
+*/
      }
 
     /**
@@ -161,15 +161,13 @@ public class controller implements Initializable{
   public void Enter(ActionEvent enter) throws IOException {
     String email = emailtext.getText();
     String password = passwordtext.getText();
-    System.out.println(passwordtext.getText());
-    // if (Login.auth(email, password) == false){
-    //     System.out.println("Account email and password combination does not exist!");
-    // }
-    if (AccountManager.getAccount(email, password) == null)
+    ReadFile.ReadAccount();
+    if (Login.auth(email, password) == false){
         System.out.println("Account email and password combination does not exist!");
+    }
     else{
         AccountManager.setCurrentAccount(AccountManager.getAccount(email));
-        //Main.switchView("allListings.fxml");
+        //OtherMain.switchView("allListings.fxml");
         root = FXMLLoader.load(getClass().getResource("successfulLogin.fxml"));
         stage = (Stage)((Node)enter.getSource()).getScene().getWindow();
         scene = new Scene(root);
